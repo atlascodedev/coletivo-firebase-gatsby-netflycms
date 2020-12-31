@@ -1,4 +1,4 @@
-module.exports = {
+export const config = {
   apiKey: process.env.GASTBY_FIREBASE_API_KEY,
   authDomain: process.env.GASTBY_FIREBASE_AUTH_DOMAIN,
   projectId: process.env.GATSBY_FIREBASE_PROJECT_ID,
