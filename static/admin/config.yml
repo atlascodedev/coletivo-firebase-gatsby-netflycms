@@ -11,13 +11,50 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-
-
+locale: pt
+logo_url: "src/images/gatsby-icon.png"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: "events"
+    editor:
+      preview: false
+    label: "Evento"
+    folder: "src/pages/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "events-post",
+        }
+
+  - name: "news"
+    editor:
+      preview: false
+    label: "Notícia"
+    folder: "src/pages/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "news-post",
+        }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data de publicação", name: date, widget: "datetime" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - { label: "Imagem principal", name: "featuredimage", widget: "image" }
+      - { label: "Post", name: "body", widget: "markdown" }
+
+  - name: "articles"
+    editor:
+      preview: false
+    label: "Artigo"
+    folder: "src/pages/articles"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -27,14 +64,24 @@ collections:
           widget: "hidden",
           default: "blog-post",
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data de publicação", name: "date", widget: "datetime" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - { label: "Post destaque", name: "featuredpost", widget: "boolean" }
+      - { label: "Imagem destaque", name: "featuredimage", widget: image }
+      - { label: "Post", name: "body", widget: "markdown" }
+      - {
+          label: "Tipo de post",
+          name: "postType",
+          widget: "select",
+          options:
+            [
+              { label: "Artigo", value: "article" },
+              { label: "Notícia", value: "news" },
+              { label: "Evento", value: "event" },
+            ],
+        }
       - { label: "Tags", name: "tags", widget: "list" }
-
   # - name: "pages"
   #   label: "Pages"
   #   files:
