@@ -5,6 +5,7 @@ import { FirebaseContext } from "./src/context/firebase"
 import { CssBaseline, MuiThemeProvider } from "@material-ui/core"
 import { navigate } from "gatsby"
 import { config as firebaseConfig } from "./config/firebase.config"
+import { theme } from "./src/theme"
 
 const app = firebase.initializeApp(firebaseConfig)
 
@@ -18,8 +19,6 @@ if (process.env.NODE_ENV !== "production") {
     "Warning, you're running a local instance of Firestore, data will not be persisted to the production database"
   )
 }
-
-const theme = {}
 
 const App = ({ root }) => {
   return (
