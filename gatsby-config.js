@@ -54,12 +54,6 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: "gatsby-remark-relative-images",
-    //   options: {
-    //     staticFolderName: "static",
-    //   },
-    // },
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {

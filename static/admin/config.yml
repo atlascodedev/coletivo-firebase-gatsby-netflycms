@@ -19,7 +19,7 @@ collections:
     editor:
       preview: false
     label: "Evento"
-    folder: "src/pages/events"
+    folder: "src/pages/eventos"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -34,7 +34,7 @@ collections:
     editor:
       preview: false
     label: "Notícia"
-    folder: "src/pages/news"
+    folder: "src/pages/noticias"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -54,7 +54,7 @@ collections:
     editor:
       preview: false
     label: "Artigo"
-    folder: "src/pages/articles"
+    folder: "src/pages/artigos"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
