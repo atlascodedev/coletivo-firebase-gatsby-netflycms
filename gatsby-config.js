@@ -42,11 +42,24 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-remark-relative-images",
+      resolve: "gatsby-transformer-remark",
       options: {
-        staticFolderName: "static",
+        plugins: [
+          {
+            resolve: "gatsby-remark-relative-images",
+            options: {
+              staticFolderName: "static",
+            },
+          },
+        ],
       },
     },
+    // {
+    //   resolve: "gatsby-remark-relative-images",
+    //   options: {
+    //     staticFolderName: "static",
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
