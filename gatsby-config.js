@@ -27,6 +27,13 @@ module.exports = {
         path: `${__dirname}/static/img`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "addons",
+        path: `${__dirname}/src/addons`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

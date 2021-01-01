@@ -82,6 +82,36 @@ collections:
             ],
         }
       - { label: "Tags", name: "tags", widget: "list" }
+
+  - name: "team"
+    editor:
+      preview: false
+    label: "Membro da equipe"
+    folder: "src/addons/team"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "ignore",
+        }
+      - {
+          label: "Nome do membro da equipe",
+          name: "teamMemberName",
+          widget: "string",
+        }
+      - {
+          label: "Foto do membro da equipe",
+          name: "teamMemberPicture",
+          widget: "image",
+        }
+      - {
+          label: "Cargo do membro da equipe",
+          name: "teamMemberPosition",
+          widget: "string",
+        }
+      - { label: "Ativo", name: "active", widget: "boolean" }
   # - name: "pages"
   #   label: "Pages"
   #   files:

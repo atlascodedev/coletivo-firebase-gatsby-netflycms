@@ -32,17 +32,21 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach(edge => {
       console.log(edge)
 
-      const id = edge.node.id
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.jsx`
-        ),
-        context: {
-          id,
-        },
-      })
+      if (edge.node.frontmatter.templateKey === "ignore") {
+        return
+      } else {
+        const id = edge.node.id
+
+        createPage({
+          path: edge.node.fields.slug,
+          component: path.resolve(
+            `src/templates/${String(edge.node.frontmatter.templateKey)}.jsx`
+          ),
+          context: {
+            id,
+          },
+        })
+      }
     })
   })
 }

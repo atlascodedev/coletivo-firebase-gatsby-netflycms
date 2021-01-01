@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 function EventPost(props) {
   console.log(props)
