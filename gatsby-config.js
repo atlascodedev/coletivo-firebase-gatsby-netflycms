@@ -34,6 +34,7 @@ module.exports = {
         path: `${__dirname}/src/addons`,
       },
     },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

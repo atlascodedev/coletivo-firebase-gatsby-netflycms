@@ -32,7 +32,7 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach(edge => {
       console.log(edge)
 
-      if (edge.node.frontmatter.templateKey === "ignore") {
+      if (edge.node.frontmatter.templateKey === "ignore") { 
         return
       } else {
         const id = edge.node.id

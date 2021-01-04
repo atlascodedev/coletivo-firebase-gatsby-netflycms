@@ -15,6 +15,9 @@ locale: pt
 logo_url: "src/images/gatsby-icon.png"
 
 collections:
+  # --------------------------------------------------------------- #
+  #                           Events                                #
+  # --------------------------------------------------------------- #
   - name: "events"
     editor:
       preview: false
@@ -29,7 +32,9 @@ collections:
           widget: "hidden",
           default: "events-post",
         }
-
+  # --------------------------------------------------------------- #
+  #                            News                                 #
+  # --------------------------------------------------------------- #
   - name: "news"
     editor:
       preview: false
@@ -49,7 +54,9 @@ collections:
       - { label: "Descrição", name: "description", widget: "text" }
       - { label: "Imagem principal", name: "featuredimage", widget: "image" }
       - { label: "Post", name: "body", widget: "markdown" }
-
+  # --------------------------------------------------------------- #
+  #                           Articles                              #
+  # --------------------------------------------------------------- #
   - name: "articles"
     editor:
       preview: false
@@ -62,7 +69,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "blog-post",
+          default: "article-post",
         }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Data de publicação", name: "date", widget: "datetime" }
@@ -82,7 +89,31 @@ collections:
             ],
         }
       - { label: "Tags", name: "tags", widget: "list" }
-
+  # --------------------------------------------------------------- #
+  #                       Site information data                     #
+  # --------------------------------------------------------------- #
+  - name: "info"
+    editor:
+      preview: false
+    label: "Informações do website"
+    folder: "src/addons/info"
+    create: true
+    fields:
+      - {
+          label: "Content Type",
+          name: "contentType",
+          widget: "hidden",
+          default: "siteInfo",
+        }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "ignore",
+        }
+  # --------------------------------------------------------------- #
+  #                           Team Members                          #
+  # --------------------------------------------------------------- #
   - name: "team"
     editor:
       preview: false
@@ -90,6 +121,13 @@ collections:
     folder: "src/addons/team"
     create: true
     fields:
+      - {
+          label: "Content Type",
+          name: "contentType",
+          widget: "hidden",
+          default: "teamMembers",
+        }
+
       - {
           label: "Template Key",
           name: "templateKey",
