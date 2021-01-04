@@ -13,6 +13,8 @@ media_folder: static/img
 public_folder: /img
 locale: pt
 logo_url: "src/images/gatsby-icon.png"
+slug:
+  clean_accents: true
 
 collections:
   # --------------------------------------------------------------- #
@@ -66,6 +68,12 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
+          label: "Content Type",
+          name: "contentType",
+          widget: "hidden",
+          default: "articles",
+        }
+      - {
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
@@ -74,21 +82,14 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Data de publicação", name: "date", widget: "datetime" }
       - { label: "Descrição", name: "description", widget: "text" }
-      - { label: "Post destaque", name: "featuredpost", widget: "boolean" }
+      - {
+          label: "Post destaque",
+          name: "featuredpost",
+          widget: "boolean",
+          required: false,
+        }
       - { label: "Imagem destaque", name: "featuredimage", widget: image }
       - { label: "Post", name: "body", widget: "markdown" }
-      - {
-          label: "Tipo de post",
-          name: "postType",
-          widget: "select",
-          options:
-            [
-              { label: "Artigo", value: "article" },
-              { label: "Notícia", value: "news" },
-              { label: "Evento", value: "event" },
-            ],
-        }
-      - { label: "Tags", name: "tags", widget: "list" }
   # --------------------------------------------------------------- #
   #                       Site information data                     #
   # --------------------------------------------------------------- #
@@ -120,6 +121,8 @@ collections:
     label: "Membro da equipe"
     folder: "src/addons/team"
     create: true
+    slug: "{{fields.contentType}}-{{fields.teamMemberName}}-{{fields.teamMemberPosition}}-{{fields.active}}"
+
     fields:
       - {
           label: "Content Type",
