@@ -90,28 +90,7 @@ collections:
         }
       - { label: "Imagem destaque", name: "featuredimage", widget: image }
       - { label: "Post", name: "body", widget: "markdown" }
-  # --------------------------------------------------------------- #
-  #                       Site information data                     #
-  # --------------------------------------------------------------- #
-  - name: "info"
-    editor:
-      preview: false
-    label: "Informações do website"
-    folder: "src/addons/info"
-    create: true
-    fields:
-      - {
-          label: "Content Type",
-          name: "contentType",
-          widget: "hidden",
-          default: "siteInfo",
-        }
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "ignore",
-        }
+
   # --------------------------------------------------------------- #
   #                           Team Members                          #
   # --------------------------------------------------------------- #
@@ -153,7 +132,76 @@ collections:
           widget: "string",
         }
       - { label: "Ativo", name: "active", widget: "boolean" }
-  # - name: "pages"
+
+    # --------------------------------------------------------------- #
+  #                       Site information data                     #
+  # --------------------------------------------------------------- #
+  - name: "info"
+    editor:
+      preview: false
+    label: "Informações do website"
+    folder: "src/addons/info"
+    slug: "websiteInfoData"
+    create: true
+    fields:
+      - {
+          label: "Content Type",
+          name: "contentType",
+          widget: "hidden",
+          default: "siteInfo",
+        }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "ignore",
+        }
+      - { label: "Endereço", name: "address", widget: "string" }
+      - { label: "Telefone 1", name: "phoneOne", widget: "string" }
+      - {
+          label: "Telefone 2",
+          name: "phoneTwo",
+          widget: "string",
+          required: false,
+          default: "",
+        }
+      - { label: "E-mail 1", name: "mailOne", widget: "string" }
+      - {
+          label: "Email 2",
+          name: "mailTwo",
+          widget: "string",
+          required: false,
+          default: "",
+        }
+      - {
+          label: "Facebook (link)",
+          name: "facebookUrl",
+          widget: "string",
+          required: false,
+          default: "#",
+        }
+      - {
+          label: "Instagram (link)",
+          name: "instagramUrl",
+          widget: "string",
+          default: "#",
+          required: false,
+        }
+      - {
+          label: "WhatsApp (número com DDD)",
+          name: "whatsAppNum",
+          widget: "number",
+          default: "#",
+          required: false,
+        }
+      - {
+          label: "Mensagem automática para contato via WhatsApp",
+          name: "whatsAppMessage",
+          widget: "string",
+          default: "",
+          required: false,
+        }
+      # - name: "pages"
   #   label: "Pages"
   #   files:
   #     - file: "src/pages/index.md"

@@ -1,28 +1,21 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import React from "react"
 
 function ArticlePost(props) {
-  const data = useStaticQuery(graphql`
-    {
-      allMarkdownRemark(
-        filter: { frontmatter: { contentType: { eq: "teamMembers" } } }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              teamMemberName
-              teamMemberPicture
-              teamMemberPosition
-              active
-            }
-          }
-        }
-      }
-    }
-  `)
-  console.log(data)
+  console.log(props)
 
   return <div>Article Post template</div>
 }
 
 export default ArticlePost
+
+export const articlePostQuery = graphql`
+  query ArticlePost($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+      }
+    }
+  }
+`

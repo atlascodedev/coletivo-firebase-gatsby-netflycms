@@ -2,6 +2,19 @@ const _ = require("lodash")
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
+}
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
@@ -16,6 +29,7 @@ exports.createPages = ({ actions, graphql }) => {
             }
             frontmatter {
               templateKey
+              contentType
             }
           }
         }
@@ -32,10 +46,13 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach(edge => {
       console.log(edge)
 
-      if (edge.node.frontmatter.templateKey === "ignore") { 
+      if (edge.node.frontmatter.templateKey === "ignore") {
         return
       } else {
         const id = edge.node.id
+        const contentType = edge.node.frontmatter.contentType
+
+        console.log("****************************************", contentType)
 
         createPage({
           path: edge.node.fields.slug,
@@ -49,17 +66,4 @@ exports.createPages = ({ actions, graphql }) => {
       }
     })
   })
-}
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
 }

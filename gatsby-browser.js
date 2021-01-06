@@ -6,6 +6,12 @@ import { CssBaseline, MuiThemeProvider } from "@material-ui/core"
 import { navigate } from "gatsby"
 import { config as firebaseConfig } from "./config/firebase.config"
 import { theme } from "./src/theme"
+import "@fontsource/barlow"
+import "@fontsource/barlow/500.css"
+import "@fontsource/barlow/600.css"
+import "@fontsource/barlow/700.css"
+import "@fontsource/barlow/800.css"
+import "@fontsource/barlow/900.css"
 
 const app = firebase.initializeApp(firebaseConfig)
 
