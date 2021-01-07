@@ -2,6 +2,7 @@ import React from "react"
 import AppLayout from "../layouts/AppLayout"
 import _ from "lodash"
 import LandingHero from "../components/AppComponents/LandingHero"
+import AboutUs from "../components/AppComponents/AboutUs"
 
 function IndexPage(props) {
   const landingRef = React.useRef(null)
@@ -39,14 +40,10 @@ function IndexPage(props) {
         <LandingHero />
       </div>
       <div ref={benefitsRef}>
-        {/* <div>Second ref</div> */}
+        <AboutUs />
       </div>
-      <div ref={courseRef}>
-        {/* <div>Third ref</div> */}
-      </div>
-      <div ref={contactRef}>
-        {/* <div>Last ref</div> */}
-      </div>
+      <div ref={courseRef}>{/* <div>Third ref</div> */}</div>
+      <div ref={contactRef}>{/* <div>Last ref</div> */}</div>
 
       {/* <div style={{ minHeight: "2000px" }}></div> */}
     </AppLayout>
