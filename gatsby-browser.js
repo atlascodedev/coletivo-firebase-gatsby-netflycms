@@ -13,6 +13,7 @@ import "@fontsource/barlow/700.css"
 import "@fontsource/barlow/800.css"
 import "@fontsource/barlow/900.css"
 
+
 const app = firebase.initializeApp(firebaseConfig)
 
 const firestore = app.firestore()
