@@ -147,7 +147,7 @@ function Navbar({ minHeight, height, logo, menu }) {
         setIsTop(true)
       }
     })
-  }, [global.window.scrollY])
+  }, [])
 
   return (
     <div>
@@ -224,7 +224,12 @@ function Navbar({ minHeight, height, logo, menu }) {
 
 const AppDrawer = ({ open, handleClose, handleOpen, isHome, menu, logo }) => {
   const classes = useStyles()
-  const iOS = /iPad|iPhone|iPod/.test(navigator.platform)
+
+  let iOS
+
+  React.useEffect(() => {
+    iOS = /iPad|iPhone|iPod/.test(global.window.navigator.platform)
+  }, [])
 
   return (
     <div>

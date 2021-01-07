@@ -12,7 +12,12 @@ import "@fontsource/barlow/600.css"
 import "@fontsource/barlow/700.css"
 import "@fontsource/barlow/800.css"
 import "@fontsource/barlow/900.css"
-
+require("swiper/swiper.min.css")
+require("swiper/components/navigation/navigation.min.css")
+require("swiper/components/pagination/pagination.min.css")
+require("swiper/components/scrollbar/scrollbar.min.css")
+require("swiper/components/effect-fade/effect-fade.min.css")
+require("swiper/components/scrollbar/scrollbar.min.css")
 
 const app = firebase.initializeApp(firebaseConfig)
 

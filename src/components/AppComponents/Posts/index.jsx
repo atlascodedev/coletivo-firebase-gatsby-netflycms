@@ -9,12 +9,14 @@ import styled from "styled-components"
 
 import PostCard from "./PostCard"
 import PostSlider from "./PostSlider"
+import { Fade } from "@material-ui/core"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
 
   return (
     <div
+      style={{ overflow: "hidden", width: "100%" }}
       role="tabpanel"
       hidden={value !== index}
       id={`vertical-tabpanel-${index}`}
@@ -22,8 +24,10 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
+        <Box>
+          <Fade in={true} timeout={{ enter: 500 }}>
+            <div>{children}</div>
+          </Fade>
         </Box>
       )}
     </div>
@@ -54,6 +58,15 @@ const useStyles = makeStyles(theme => ({
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
+    overflow: "visible",
+  },
+
+  singleTab: {
+    fontSize: "0.6rem",
+
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "0.85rem",
+    },
   },
 }))
 
@@ -75,25 +88,29 @@ function VerticalTabs() {
         aria-label="Vertical tabs example"
         className={classes.tabs}
       >
-        <Tab label="Projetos" {...a11yProps(0)} />
-        <Tab label="Notícias" {...a11yProps(1)} />
-        <Tab label="Artigos" {...a11yProps(2)} />
+        <Tab className={classes.singleTab} label="Projetos" {...a11yProps(0)} />
+        <Tab className={classes.singleTab} label="Notícias" {...a11yProps(1)} />
+        <Tab className={classes.singleTab} label="Artigos" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>
         <PostSlider />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Notícias
+        <PostSlider />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Artigos
+        <PostSlider />
       </TabPanel>
     </div>
   )
 }
 
 const PostContainer = styled.div`
-  padding: 4em;
+  padding: 0.5em;
+
+  @media (min-width: 1024px) {
+    padding: 4em;
+  }
 `
 
 const Posts = props => {
@@ -102,10 +119,6 @@ const Posts = props => {
       <PostContainer>
         <VerticalTabs />
       </PostContainer>
-
-      <Box p={5}>
-        <PostSlider></PostSlider>
-      </Box>
     </div>
   )
 }
