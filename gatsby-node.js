@@ -24,7 +24,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       teamMemberPosition: String
       teamMemberPicture : String
       description: String
-      featuredImage: [String]!
+      featuredImage: File @link(from: "featuredImage__NODE")
       body: String
       date: Date
 
