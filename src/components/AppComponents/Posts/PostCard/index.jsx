@@ -1,4 +1,5 @@
 import { Button } from "@material-ui/core"
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 
@@ -84,7 +85,7 @@ const PostCallToActionContainer = styled.div`
   width: 100%;
 `
 
-const PostCard = ({ image, title, date, excerpt }) => {
+const PostCard = ({ image, title, date, excerpt, link }) => {
   return (
     <div>
       <PostCardContainer>
@@ -105,9 +106,11 @@ const PostCard = ({ image, title, date, excerpt }) => {
         </PostInfoContainer>
 
         <PostCallToActionContainer>
-          <Button fullWidth variant="contained" color="secondary">
-            Ler post
-          </Button>
+          <Link to={link ? link.toString() : "#"}>
+            <Button fullWidth variant="contained" color="secondary">
+              Ler post
+            </Button>
+          </Link>
         </PostCallToActionContainer>
       </PostCardContainer>
     </div>

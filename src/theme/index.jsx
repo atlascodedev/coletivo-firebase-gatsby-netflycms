@@ -9,4 +9,8 @@ export const theme = createMuiTheme({
       main: "#17396B",
     },
   },
+
+  typography: {
+    fontFamily: ["Barlow"],
+  },
 })

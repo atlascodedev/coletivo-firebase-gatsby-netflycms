@@ -2,6 +2,39 @@ const _ = require("lodash")
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+      fields: Fields
+    }
+
+    type Fields {
+      slug: String
+    }
+
+    type Frontmatter {
+      templateKey: String
+      contentType: String
+      title: String
+      active: Boolean
+      teamMemberName: String
+      teamMemberPosition: String
+      teamMemberPicture : String
+      description: String
+      featuredImage: String
+      body: String
+      date: Date
+
+
+    }
+  `
+
+  createTypes(typeDefs)
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
@@ -35,35 +68,41 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
-    }
+  `)
+    .then(result => {
+      console.log(result)
 
-    const posts = result.data.allMarkdownRemark.edges
-
-    posts.forEach(edge => {
-      console.log(edge)
-
-      if (edge.node.frontmatter.templateKey === "ignore") {
-        return
-      } else {
-        const id = edge.node.id
-        const contentType = edge.node.frontmatter.contentType
-
-        console.log("****************************************", contentType)
-
-        createPage({
-          path: edge.node.fields.slug,
-          component: path.resolve(
-            `src/templates/${String(edge.node.frontmatter.templateKey)}.jsx`
-          ),
-          context: {
-            id,
-          },
-        })
+      if (result.errors) {
+        result.errors.forEach(e => console.error(e.toString()))
+        return Promise.reject(result.errors)
       }
+
+      const posts = result.data.allMarkdownRemark.edges
+
+      posts.forEach(edge => {
+        console.log(edge)
+
+        if (edge.node.frontmatter.templateKey === "ignore") {
+          return
+        } else {
+          const id = edge.node.id
+          const contentType = edge.node.frontmatter.contentType
+
+          console.log("****************************************", contentType)
+
+          createPage({
+            path: edge.node.fields.slug,
+            component: path.resolve(
+              `src/templates/${String(edge.node.frontmatter.templateKey)}.jsx`
+            ),
+            context: {
+              id,
+            },
+          })
+        }
+      })
     })
-  })
+    .catch(error => {
+      console.log("damn there was an error")
+    })
 }

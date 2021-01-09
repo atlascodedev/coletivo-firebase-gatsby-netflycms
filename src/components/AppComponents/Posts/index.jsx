@@ -9,7 +9,7 @@ import styled from "styled-components"
 
 import PostCard from "./PostCard"
 import PostSlider from "./PostSlider"
-import { Fade } from "@material-ui/core"
+import { Container, Fade, Slide } from "@material-ui/core"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -25,9 +25,17 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box>
-          <Fade in={true} timeout={{ enter: 500 }}>
-            <div>{children}</div>
-          </Fade>
+          <Slide
+            in={true}
+            direction={"right"}
+            timeout={{ enter: 1000, exit: 500 }}
+          >
+            <div>
+              <Fade in={true} timeout={{ enter: 1750 }}>
+                <div>{children}</div>
+              </Fade>
+            </div>
+          </Slide>
         </Box>
       )}
     </div>
@@ -48,6 +56,27 @@ function a11yProps(index) {
 }
 
 const useStyles = makeStyles(theme => ({
+  ancientRoot: {
+    marginBottom: "1em",
+    marginTop: "1em",
+
+    "& .postSectionTitleContainer": {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      fontWeight: 800,
+      fontFamily: theme.typography.fontFamily,
+      textTransform: "uppercase",
+      textAlign: "center",
+      fontSize: "0.75rem",
+
+      "@media (min-width: 1024px)": {
+        fontSize: "1.15rem",
+        marginBottom: "2rem",
+      },
+    },
+  },
+
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
@@ -63,6 +92,8 @@ const useStyles = makeStyles(theme => ({
 
   singleTab: {
     fontSize: "0.6rem",
+    fontWeight: 800,
+    fontFamily: theme.typography.fontFamily,
 
     [theme.breakpoints.up("sm")]: {
       fontSize: "0.85rem",
@@ -79,28 +110,46 @@ function VerticalTabs() {
   }
 
   return (
-    <div className={classes.root}>
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        aria-label="Vertical tabs example"
-        className={classes.tabs}
-      >
-        <Tab className={classes.singleTab} label="Projetos" {...a11yProps(0)} />
-        <Tab className={classes.singleTab} label="Notícias" {...a11yProps(1)} />
-        <Tab className={classes.singleTab} label="Artigos" {...a11yProps(2)} />
-      </Tabs>
-      <TabPanel value={value} index={0}>
-        <PostSlider />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <PostSlider />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <PostSlider />
-      </TabPanel>
+    <div className={classes.ancientRoot}>
+      <div className={"postSectionTitleContainer"}>
+        <h2>Fique por dentro das nossas novidades</h2>
+      </div>
+
+      <div className={classes.root}>
+        <Tabs
+          orientation="vertical"
+          variant="scrollable"
+          value={value}
+          onChange={handleChange}
+          aria-label="Vertical tabs example"
+          className={classes.tabs}
+        >
+          <Tab
+            className={classes.singleTab}
+            label="Projetos"
+            {...a11yProps(0)}
+          />
+          <Tab
+            className={classes.singleTab}
+            label="Notícias"
+            {...a11yProps(1)}
+          />
+          <Tab
+            className={classes.singleTab}
+            label="Artigos"
+            {...a11yProps(2)}
+          />
+        </Tabs>
+        <TabPanel value={value} index={0}>
+          <PostSlider />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <PostSlider />
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <PostSlider />
+        </TabPanel>
+      </div>
     </div>
   )
 }
