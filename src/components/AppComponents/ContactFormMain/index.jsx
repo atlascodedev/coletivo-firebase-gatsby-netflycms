@@ -144,6 +144,33 @@ function CourseContactForm(props) {
     }
   `)
 
+  const [phoneOne, setPhoneOne] = React.useState(null)
+  const [phoneTwo, setPhoneTwo] = React.useState(null)
+  const [mailOne, setMailOne] = React.useState(null)
+  const [mailTwo, setMailTwo] = React.useState(null)
+  const [instagramUrl, setInstagramUrl] = React.useState("#")
+  const [facebookUrl, setFacebookUrl] = React.useState("#")
+  const [whatsAppNum, setWhatsAppNum] = React.useState("#")
+  const [whatsAppMessage, setWhatsAppMessage] = React.useState(
+    "Placeholder WhatsApp automatic message"
+  )
+  const [address, setAddress] = React.useState(null)
+
+  React.useEffect(() => {
+    let localArray = []
+
+    if (data.allMarkdownRemark.edges.length <= 0) {
+      console.log("No site info found")
+      return
+    } else {
+      localArray.allMarkdownRemark.edges.map((info, index) => {
+        return info.node.frontmatter
+      })
+    }
+
+    console.log(localArray)
+  }, [])
+
   console.log(data)
 
   const [dialogState, setDialogState] = React.useState(false)
@@ -330,8 +357,8 @@ function CourseContactForm(props) {
           fontWeight="600"
         >
           <Box py={1}>Telefones:</Box>
-          <Box py={1}>{"(XX) XXXXX-XXXX"}</Box>
-          <Box py={1}>{"(XX) XXXXX-XXXX"}</Box>
+          {phoneOne ? <Box py={1}>{phoneOne}</Box> : null}
+          {phoneTwo ? <Box py={1}>{phoneTwo}</Box> : null}
         </Box>
 
         <Box
@@ -342,7 +369,10 @@ function CourseContactForm(props) {
           fontWeight="600"
         >
           <Box py={1}>E-mail:</Box>
-          <Box py={1}>{"placeholder@placeholder.com"}</Box>
+
+          {mailOne ? <Box py={1}>{mailOne}</Box> : null}
+
+          {mailTwo ? <Box py={1}>{mailTwo} </Box> : null}
         </Box>
 
         <Box py={1} display="flex">
@@ -352,7 +382,9 @@ function CourseContactForm(props) {
             fontSize={{ xs: "50px" }}
             pr={3}
           >
-            <SvgIcon fontSize="inherit" component={Facebook} />
+            <a style={{ color: "inherit" }} href={facebookUrl}>
+              <SvgIcon fontSize="inherit" component={Facebook} />
+            </a>
           </Box>
 
           <Box
@@ -361,7 +393,9 @@ function CourseContactForm(props) {
             fontSize={{ xs: "50px" }}
             pr={3}
           >
-            <SvgIcon fontSize="inherit" component={Instagram} />
+            <a style={{ color: "inherit" }} href={instagramUrl}>
+              <SvgIcon fontSize="inherit" component={Instagram} />
+            </a>
           </Box>
           <Box
             className={classes.socialIcons}
@@ -369,7 +403,9 @@ function CourseContactForm(props) {
             fontSize={{ xs: "50px" }}
             pr={3}
           >
-            <SvgIcon fontSize="inherit" component={WhatsApp} />
+            <a style={{ color: "inherit" }} href={whatsAppNum}>
+              <SvgIcon fontSize="inherit" component={WhatsApp} />
+            </a>
           </Box>
         </Box>
       </Box>

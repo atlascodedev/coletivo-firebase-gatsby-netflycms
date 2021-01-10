@@ -10,43 +10,45 @@ import CourseContactForm from "../components/AppComponents/ContactFormMain"
 
 function IndexPage(props) {
   const landingRef = React.useRef(null)
-  const benefitsRef = React.useRef(null)
-  const courseRef = React.useRef(null)
   const contactRef = React.useRef(null)
+  const postsRef = React.useRef(null)
+  const aboutUsRef = React.useRef(null)
 
   const menu = [
     {
       menuName: "Home",
       reference: landingRef,
+      scrollFunction: null,
     },
 
     {
       menuName: "Sobre nós",
-      reference: courseRef,
+      reference: aboutUsRef,
+      scrollFunction: null,
     },
 
     {
       menuName: "Novidades",
-      reference: null,
+      reference: postsRef,
+      scrollFunction: null,
     },
 
     {
       menuName: "Contato",
       reference: contactRef,
+      scrollFunction: null,
     },
   ]
 
-  const pageRefs = [landingRef, benefitsRef, courseRef, contactRef]
-
   return (
-    <AppLayout refs={pageRefs} menu={menu}>
+    <AppLayout menu={menu}>
       <div ref={landingRef}>
         <LandingHero />
       </div>
-      <div ref={benefitsRef}>
+      <div ref={aboutUsRef}>
         <AboutUs />
       </div>
-      <div ref={courseRef}>
+      <div ref={postsRef}>
         <Posts />
       </div>
 

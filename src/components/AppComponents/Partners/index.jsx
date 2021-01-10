@@ -72,13 +72,19 @@ function Partners(props) {
   const [partners, setPartners] = React.useState([])
 
   React.useEffect(() => {
-    // let partnersLocal = []
+    if (data.allMarkdownRemark.edges.length <= 0) {
+      console.log("No partners found")
+      return
+    }
+    try {
+      let partnersLocal = data.allMarkdownRemark.edges.map((partner, index) => {
+        return partner.node.frontmatter
+      })
 
-    let partnersLocal = data.allMarkdownRemark.edges.map((partner, index) => {
-      return partner.node.frontmatter
-    })
-
-    setPartners(partnersLocal)
+      setPartners(partnersLocal)
+    } catch (error) {
+      console.log(error)
+    }
   }, [])
 
   console.log(partners)

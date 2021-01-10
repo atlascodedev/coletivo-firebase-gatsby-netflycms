@@ -182,6 +182,7 @@ function Navbar({ minHeight, height, logo, menu }) {
                   return (
                     <li
                       key={index}
+                      onClick={() => menuItem.scrollFunction()}
                       onMouseEnter={() => {
                         global.window.document.querySelector(
                           `#effect${index}`
