@@ -204,11 +204,29 @@ function OurTeam(props) {
     }
   `)
 
-  let teamMembers = data.allMarkdownRemark.edges.map((member, index) => {
-    return member.node.frontmatter
-  })
+  const [teamMembersArray, setTeamMembersArray] = React.useState([])
 
-  console.log(teamMembers)
+  React.useEffect(() => {
+    let firstMember
+
+    let teamMembers = data.allMarkdownRemark.edges.map((member, index) => {
+      return member.node.frontmatter
+    })
+
+    teamMembers.forEach((item, index) => {
+      if (item.teamMemberPosition.toUpperCase() === "PRESIDENTE") {
+        firstMember = item
+
+        teamMembers.splice(index)
+      }
+    })
+
+    teamMembers.unshift(firstMember)
+
+    setTeamMembersArray(teamMembers)
+  }, [])
+
+  console.log(teamMembersArray)
 
   return (
     <OurTeamRootContainer>
@@ -217,18 +235,14 @@ function OurTeam(props) {
           <OurTeamPhotosContainer>
             <h3>Equipe</h3>
             <OurTeamPhotosInnerContainer>
-              <TeamMemberCard
-                img={teamMembers[0].teamMemberPicture}
-                name={teamMembers[0].teamMemberName}
-                position={teamMembers[0].teamMemberPosition}
-              />
-              <TeamMemberCard />
-              <TeamMemberCard />
-              <TeamMemberCard />
-              <TeamMemberCard />
-              <TeamMemberCard />
-              <TeamMemberCard />
-              <TeamMemberCard />
+              {teamMembersArray.map((member, index) => (
+                <TeamMemberCard
+                  key={index}
+                  img={member.teamMemberPicture}
+                  name={member.teamMemberName}
+                  position={member.teamMemberPosition}
+                />
+              ))}
             </OurTeamPhotosInnerContainer>
           </OurTeamPhotosContainer>
           <OurTeamTextContainer>
