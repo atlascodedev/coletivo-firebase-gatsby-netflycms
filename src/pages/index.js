@@ -5,40 +5,13 @@ import LandingHero from "../components/AppComponents/LandingHero"
 import AboutUs from "../components/AppComponents/AboutUs"
 import Posts from "../components/AppComponents/Posts"
 import { graphql, useStaticQuery } from "gatsby"
+import OurTeam from "../components/AppComponents/OurTeam"
 
 function IndexPage(props) {
   const landingRef = React.useRef(null)
   const benefitsRef = React.useRef(null)
   const courseRef = React.useRef(null)
   const contactRef = React.useRef(null)
-
-  const data = useStaticQuery(graphql`
-    {
-      allMarkdownRemark(
-        filter: { frontmatter: { contentType: { eq: "teamMembers" } } }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              contentType
-              teamMemberPicture
-              teamMemberPosition
-              teamMemberName
-              active
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  console.log(data.allMarkdownRemark.edges)
-
-  let teamMembers = data.allMarkdownRemark.edges.map((member, index) => {
-    return member.node.frontmatter
-  })
-
-  console.log(teamMembers)
 
   const menu = [
     {
@@ -47,13 +20,13 @@ function IndexPage(props) {
     },
 
     {
-      menuName: "Benefícios",
-      reference: benefitsRef,
+      menuName: "Sobre nós",
+      reference: courseRef,
     },
 
     {
-      menuName: "Cursos",
-      reference: courseRef,
+      menuName: "Novidades",
+      reference: null,
     },
 
     {
@@ -74,6 +47,10 @@ function IndexPage(props) {
       </div>
       <div ref={courseRef}>
         <Posts />
+      </div>
+
+      <div>
+        <OurTeam />
       </div>
       <div ref={contactRef}>{/* <div>Last ref</div> */}</div>
 

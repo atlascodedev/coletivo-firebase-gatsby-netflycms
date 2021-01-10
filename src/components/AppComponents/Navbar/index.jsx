@@ -122,8 +122,8 @@ function Navbar({ minHeight, height, logo, menu }) {
   const { pathname } = useLocation()
   const isHome = pathname == "/"
 
-  const appBarMinHeight = minHeight ? minHeight : false
-  const appBarHeight = height ? height : false
+  const appBarMinHeight = minHeight ? minHeight : 0
+  const appBarHeight = height ? height : 0
 
   React.useEffect(() => {
     if (menu) {
