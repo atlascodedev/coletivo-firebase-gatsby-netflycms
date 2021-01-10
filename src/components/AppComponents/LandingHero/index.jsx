@@ -53,8 +53,8 @@ const LandingHeroImage = styled.img`
   }
 
   @media (min-width: 1024px) {
-    height: 100%;
-    width: 100%;
+    /* height: 100%; */
+    /* width: 100%; */
   }
 `
 

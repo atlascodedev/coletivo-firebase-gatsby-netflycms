@@ -52,9 +52,11 @@ function IndexPage(props) {
       <div>
         <OurTeam />
       </div>
+
+    
+
       <div ref={contactRef}>{/* <div>Last ref</div> */}</div>
 
-      {/* <div style={{ minHeight: "2000px" }}></div> */}
     </AppLayout>
   )
 }

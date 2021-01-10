@@ -27,6 +27,15 @@ exports.createSchemaCustomization = ({ actions }) => {
       featuredimage: String
       body: String
       date: Date
+      address: String
+      phoneOne: String
+      phoneTwo: String
+      mailOne: String
+      mailTwo: String
+      facebookUrl: String
+      instagramUrl: String
+      whatsAppNum: Int
+      whatsAppMessage: String
 
 
     }

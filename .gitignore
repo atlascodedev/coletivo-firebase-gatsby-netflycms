@@ -10,7 +10,7 @@ firebase.json
 firestore.indexes.json
 firestore.rules
 storage.rules
-
+.firebase
 
 # Runtime data
 pids
