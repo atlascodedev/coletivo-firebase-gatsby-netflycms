@@ -203,3 +203,28 @@ collections:
           required: false,
         }
       # - name: "pages"
+    # --------------------------------------------------------------- #
+  #                      Partners                                   #
+  # --------------------------------------------------------------- #
+  - name: "partners"
+    label: "Parceiros"
+    editor:
+      preview: false
+    folder: "src/addons/partners"
+    slug: "{{fields.contentType}}-{{fields.partnerName}}"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "ignore",
+        }
+      - {
+          label: "Content Type",
+          name: "contentType",
+          widget: "hidden",
+          default: "partners",
+        }
+      - { label: "Nome do parceiro", name: "partnerName", widget: "string" }
+      - { label: "Logotipo do parceiro", name: "partnerLogo", widget: "image" }

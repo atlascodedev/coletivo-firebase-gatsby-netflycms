@@ -36,6 +36,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       instagramUrl: String
       whatsAppNum: Int
       whatsAppMessage: String
+      partnerName: String
+      partnerLogo: String
 
 
     }

@@ -4,8 +4,9 @@ import _ from "lodash"
 import LandingHero from "../components/AppComponents/LandingHero"
 import AboutUs from "../components/AppComponents/AboutUs"
 import Posts from "../components/AppComponents/Posts"
-import { graphql, useStaticQuery } from "gatsby"
 import OurTeam from "../components/AppComponents/OurTeam"
+import Partners from "../components/AppComponents/Partners"
+import CourseContactForm from "../components/AppComponents/ContactFormMain"
 
 function IndexPage(props) {
   const landingRef = React.useRef(null)
@@ -53,10 +54,13 @@ function IndexPage(props) {
         <OurTeam />
       </div>
 
-    
+      <div>
+        <Partners />
+      </div>
 
-      <div ref={contactRef}>{/* <div>Last ref</div> */}</div>
-
+      <div ref={contactRef}>
+        <CourseContactForm />
+      </div>
     </AppLayout>
   )
 }

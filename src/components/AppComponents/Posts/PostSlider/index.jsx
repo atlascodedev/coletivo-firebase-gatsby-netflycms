@@ -27,6 +27,7 @@ function PostSlider() {
   return (
     <div>
       <Swiper
+        id="swiper-1"
         slidesPerView={1}
         pagination={{ clickable: true }}
         autoplay={true}

@@ -11,7 +11,7 @@ function AppLayout({ children, refs, menu }) {
 
       <main>{children}</main>
 
-      <WhatsAppButton />
+      {/* <WhatsAppButton /> */}
       <Footer />
     </React.Fragment>
   )

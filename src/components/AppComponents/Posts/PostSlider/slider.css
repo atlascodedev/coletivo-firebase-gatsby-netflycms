@@ -1,24 +1,24 @@
-.swiper-slide {
+#swiper-1 .swiper-slide {
   display: flex;
   justify-content: center;
   width: 100%;
   align-items: center;
 }
 
-.swiper-pagination {
+#swiper-1 .swiper-pagination {
   bottom: 20px;
 }
 
-.swiper-container {
+#swiper-1.swiper-container {
   height: 400px;
 }
 
 @media (min-width: 1024px) {
-  .swiper-slide {
+  #swiper-1 .swiper-slide {
     width: 33.3333%;
   }
 
-  .swiper-container {
+  #swiper-1.swiper-container {
     height: 500px;
   }
 }
