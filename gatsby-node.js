@@ -9,6 +9,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
       fields: Fields
+      html: String
     }
 
     type Fields {
@@ -68,6 +69,7 @@ exports.createPages = ({ actions, graphql }) => {
       allMarkdownRemark(limit: 1000) {
         edges {
           node {
+            html
             id
             fields {
               slug
@@ -103,7 +105,14 @@ exports.createPages = ({ actions, graphql }) => {
           return
         } else {
           const id = edge.node.id
+          const templateKey = edge.node.frontmatter.templateKey
           const contentType = edge.node.frontmatter.contentType
+          const title = edge.node.frontmatter.title
+          const date = edge.node.frontmatter.date
+          const description = edge.node.frontmatter.description
+          const featuredImage = edge.node.frontmatter.featuredimage
+          const markdown = edge.node.frontmatter.markdown
+          const html = edge.node.html
 
           console.log("****************************************", contentType)
 
@@ -114,12 +123,20 @@ exports.createPages = ({ actions, graphql }) => {
             ),
             context: {
               id,
+              templateKey,
+              contentType,
+              title,
+              date,
+              description,
+              featuredImage,
+              markdown,
+              html,
             },
           })
         }
       })
     })
     .catch(error => {
-      console.log("damn there was an error")
+      console.log("damn there was an error", error)
     })
 }

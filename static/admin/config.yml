@@ -12,7 +12,9 @@ backend:
 media_folder: static/img
 public_folder: /img
 locale: pt
-logo_url: "src/images/gatsby-icon.png"
+display_url: "http://coletivoprocidadania.org/"
+site_url: "http://coletivoprocidadania.org/"
+logo_url: "https://i.imgur.com/T3mdTTK.png"
 slug:
   clean_accents: true
 
@@ -26,7 +28,7 @@ collections:
     label: "Evento"
     folder: "src/pages/eventos"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {
           label: "ContentType",
@@ -55,7 +57,7 @@ collections:
     label: "Notícia"
     folder: "src/pages/noticias"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {
           label: "ContentType",
@@ -84,7 +86,7 @@ collections:
     label: "Artigo"
     folder: "src/pages/artigos"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {
           label: "ContentType",

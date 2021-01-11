@@ -140,13 +140,17 @@ function Navbar({ minHeight, height, logo, menu }) {
   }, [])
 
   React.useEffect(() => {
-    global.window.addEventListener("scroll", () => {
-      if (global.window.scrollY > 1) {
-        setIsTop(false)
-      } else {
-        setIsTop(true)
-      }
-    })
+    if (isHome) {
+      global.window.addEventListener("scroll", () => {
+        if (global.window.scrollY > 1) {
+          setIsTop(false)
+        } else {
+          setIsTop(true)
+        }
+      })
+    } else {
+      setIsTop(false)
+    }
   }, [])
 
   return (
@@ -182,7 +186,13 @@ function Navbar({ minHeight, height, logo, menu }) {
                   return (
                     <li
                       key={index}
-                      onClick={() => menuItem.scrollFunction()}
+                      onClick={() => {
+                        if (pathname === "/") {
+                          menuItem.scrollFunction()
+                        } else {
+                          navigate("/")
+                        }
+                      }}
                       onMouseEnter={() => {
                         global.window.document.querySelector(
                           `#effect${index}`

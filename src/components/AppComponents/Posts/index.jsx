@@ -10,6 +10,7 @@ import styled from "styled-components"
 import PostCard from "./PostCard"
 import PostSlider from "./PostSlider"
 import { Container, Fade, Slide } from "@material-ui/core"
+import { graphql, useStaticQuery } from "gatsby"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -163,6 +164,41 @@ const PostContainer = styled.div`
 `
 
 const Posts = props => {
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: { frontmatter: { templateKey: { eq: "post" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              templateKey
+              contentType
+              title
+              description
+              featuredimage
+              date
+            }
+            html
+          }
+        }
+      }
+    }
+  `)
+
+  const [postData, setPostData] = React.useState([])
+
+  React.useEffect(() => {
+    data.allMarkdownRemark.edges.forEach(post => {
+      setPostData(prevState => [
+        ...prevState,
+        { data: post.node.frontmatter, html: post.node.html },
+      ])
+    })
+  }, [])
+
+  console.log(postData)
+
   return (
     <div>
       <PostContainer>
