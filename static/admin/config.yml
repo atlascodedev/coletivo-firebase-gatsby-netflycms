@@ -29,12 +29,23 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
-          label: "Template key",
+          label: "ContentType",
+          name: "contentType",
+          widget: "hidden",
+          default: "event",
+        }
+      - {
+          label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "events-post",
+          default: "post",
         }
-      - { label: "Título", name: "title", wdiget: "string" }
+
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data de publicação", name: date, widget: "datetime" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - { label: "Imagem principal", name: "featuredimage", widget: "image" }
+      - { label: "Post", name: "body", widget: "markdown" }
   # --------------------------------------------------------------- #
   #                            News                                 #
   # --------------------------------------------------------------- #
@@ -47,11 +58,18 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
+          label: "ContentType",
+          name: "contentType",
+          widget: "hidden",
+          default: "news",
+        }
+      - {
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "news-post",
+          default: "post",
         }
+
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Data de publicação", name: date, widget: "datetime" }
       - { label: "Descrição", name: "description", widget: "text" }
@@ -69,7 +87,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
-          label: "Content Type",
+          label: "ContentType",
           name: "contentType",
           widget: "hidden",
           default: "articles",
@@ -78,20 +96,14 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "article-post",
+          default: "post",
         }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Data de publicação", name: "date", widget: "datetime" }
-      - { label: "Descrição", name: "description", widget: "text" }
-      - {
-          label: "Post destaque",
-          name: "featuredpost",
-          widget: "boolean",
-          required: false,
-        }
-      - { label: "Imagem destaque", name: "featuredimage", widget: image }
-      - { label: "Post", name: "body", widget: "markdown" }
 
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data de publicação", name: date, widget: "datetime" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - { label: "Imagem principal", name: "featuredimage", widget: "image" }
+      - { label: "Post", name: "body", widget: "markdown" }
   # --------------------------------------------------------------- #
   #                           Team Members                          #
   # --------------------------------------------------------------- #

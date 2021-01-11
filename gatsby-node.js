@@ -38,6 +38,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       whatsAppMessage: String
       partnerName: String
       partnerLogo: String
+      markdown: String
 
 
     }
@@ -74,6 +75,11 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               templateKey
               contentType
+              title
+              date
+              description
+              featuredimage
+              markdown
             }
           }
         }
