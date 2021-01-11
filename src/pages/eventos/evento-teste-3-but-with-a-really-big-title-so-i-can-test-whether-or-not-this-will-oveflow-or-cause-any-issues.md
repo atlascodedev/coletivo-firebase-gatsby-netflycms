@@ -1,7 +1,7 @@
 ---
 contentType: events
 templateKey: post
-title: Evento teste 3 but with a really big title so I can test whether or not
+title: Evento teste 4 but with a really big title so I can test whether or not
   this will oveflow or cause any issues
 date: 2021-01-11T22:41:04.352Z
 description: Lorem ipsum description again, you know the drill
