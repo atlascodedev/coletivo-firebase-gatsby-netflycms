@@ -102,13 +102,34 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function VerticalTabs() {
+function VerticalTabs({ posts }) {
   const classes = useStyles()
   const [value, setValue] = React.useState(0)
+  const [articlesPosts, setArticlesPosts] = React.useState([])
+  const [newsPosts, setNewsPosts] = React.useState([])
+  const [eventsPosts, setEventsPosts] = React.useState([])
+
+  React.useEffect(() => {
+    posts.forEach(post => {
+      if (post.post.contentType == "events") {
+        setEventsPosts(prevEvents => [...prevEvents, post])
+      } else if (post.post.contentType == "news") {
+        setNewsPosts(prevNews => [...prevNews, post])
+      } else {
+        setArticlesPosts(prevArticles => [...prevArticles, post])
+      }
+    })
+  }, [])
+
+  console.log(articlesPosts, "articles")
+  console.log(newsPosts, "news")
+  console.log(eventsPosts, "events")
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
+
+  // articles, news, events
 
   return (
     <div className={classes.ancientRoot}>
@@ -142,13 +163,13 @@ function VerticalTabs() {
           />
         </Tabs>
         <TabPanel value={value} index={0}>
-          <PostSlider />
+          <PostSlider postData={eventsPosts} />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <PostSlider />
+          <PostSlider postData={newsPosts} />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <PostSlider />
+          <PostSlider postData={articlesPosts} />
         </TabPanel>
       </div>
     </div>
@@ -179,7 +200,9 @@ const Posts = props => {
               featuredimage
               date
             }
-            html
+            fields {
+              slug
+            }
           }
         }
       }
@@ -190,9 +213,9 @@ const Posts = props => {
 
   React.useEffect(() => {
     data.allMarkdownRemark.edges.forEach(post => {
-      setPostData(prevState => [
-        ...prevState,
-        { data: post.node.frontmatter, html: post.node.html },
+      setPostData(prevPosts => [
+        ...prevPosts,
+        { post: post.node.frontmatter, slug: post.node.fields.slug },
       ])
     })
   }, [])
@@ -201,9 +224,11 @@ const Posts = props => {
 
   return (
     <div>
-      <PostContainer>
-        <VerticalTabs />
-      </PostContainer>
+      {postData.length > 0 ? (
+        <PostContainer>
+          <VerticalTabs posts={postData} />
+        </PostContainer>
+      ) : null}
     </div>
   )
 }

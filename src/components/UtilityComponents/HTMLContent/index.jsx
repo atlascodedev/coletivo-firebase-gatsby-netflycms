@@ -1,6 +1,7 @@
 import React from "react"
 
 export const HTMLContent = ({ content, className }) => {
+  
   return (
     <div
       className={className ? className : null}

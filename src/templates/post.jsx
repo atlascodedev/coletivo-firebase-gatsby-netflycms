@@ -18,6 +18,12 @@ const PostContentContainer = styled.div`
     max-width: 100% !important;
   }
 
+  & .markdownContent {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   @media (min-width: 1024px) {
     padding-left: 48px;
     padding-right: 48px;

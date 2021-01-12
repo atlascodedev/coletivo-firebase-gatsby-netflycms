@@ -6,7 +6,7 @@ import styled from "styled-components"
 const PostCardContainer = styled.div`
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  width: 212px;
+  width: 252px;
   height: 288px;
   padding: 1em;
   padding-top: 0.5em;
@@ -51,12 +51,12 @@ const PostInfoContainer = styled.div`
 
 const PostCardTitle = styled.div`
   color: #333;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   align-self: flex-start;
 
   @media (min-width: 1024px) {
-    font-size: 18px;
+    font-size: 13px;
   }
 `
 
@@ -66,7 +66,7 @@ const PostCardDate = styled.div`
   color: #797979;
 
   @media (min-width: 1024px) {
-    font-size: 12px;
+    font-size: 10px;
   }
 `
 

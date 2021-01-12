@@ -34,7 +34,7 @@ collections:
           label: "ContentType",
           name: "contentType",
           widget: "hidden",
-          default: "event",
+          default: "events",
         }
       - {
           label: "Template Key",
@@ -101,7 +101,13 @@ collections:
           default: "post",
         }
 
-      - { label: "Título", name: "title", widget: "string" }
+      - {
+          label: "Título",
+          name: "title",
+          pattern:
+            ["^.{5,70}$", "Deve haver no mínimo 5 caracteres e no máximo 70"],
+          widget: "string",
+        }
       - { label: "Data de publicação", name: date, widget: "datetime" }
       - { label: "Descrição", name: "description", widget: "text" }
       - { label: "Imagem principal", name: "featuredimage", widget: "image" }

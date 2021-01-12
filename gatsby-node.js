@@ -113,6 +113,7 @@ exports.createPages = ({ actions, graphql }) => {
           const featuredImage = edge.node.frontmatter.featuredimage
           const markdown = edge.node.frontmatter.markdown
           const html = edge.node.html
+          const slug = edge.node.fields.slug
 
           console.log("****************************************", contentType)
 
@@ -131,6 +132,7 @@ exports.createPages = ({ actions, graphql }) => {
               featuredImage,
               markdown,
               html,
+              slug,
             },
           })
         }

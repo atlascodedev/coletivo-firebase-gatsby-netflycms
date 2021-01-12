@@ -167,11 +167,7 @@ function CourseContactForm(props) {
         return info.node.frontmatter
       })
     }
-
-    console.log(localArray)
   }, [])
-
-  console.log(data)
 
   const [dialogState, setDialogState] = React.useState(false)
 

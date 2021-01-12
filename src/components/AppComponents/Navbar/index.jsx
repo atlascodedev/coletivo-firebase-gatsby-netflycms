@@ -14,6 +14,7 @@ import styled from "styled-components"
 import { useLocation } from "@reach/router"
 import { navigate } from "gatsby"
 import { Menu } from "@material-ui/icons"
+import scrollIntoViewHelper from "../../../helper/scrollIntoView"
 
 const AtlasAppBarBase = styled.div`
   display: flex;
@@ -101,7 +102,7 @@ const ListItemUnderEffect = styled.div`
 const useStyles = makeStyles(theme => ({
   root: {},
   topMenuPaper: {
-    backgroundColor: theme.palette.primary.main,
+    // backgroundColor: theme.palette.primary.main,
     paddingBottom: "8px",
     width: "60vw",
   },
@@ -128,8 +129,6 @@ function Navbar({ minHeight, height, logo, menu }) {
   React.useEffect(() => {
     if (menu) {
       for (let index = 0; index < menu.length; index++) {
-        console.log(menu[index])
-
         menu[index].scrollFunction = () =>
           menu[index].reference.current.scrollIntoView({
             behavior: "smooth",
@@ -187,11 +186,7 @@ function Navbar({ minHeight, height, logo, menu }) {
                     <li
                       key={index}
                       onClick={() => {
-                        if (pathname === "/") {
-                          menuItem.scrollFunction()
-                        } else {
-                          navigate("/")
-                        }
+                        scrollIntoViewHelper(menuItem.reference)
                       }}
                       onMouseEnter={() => {
                         global.window.document.querySelector(
@@ -276,11 +271,7 @@ const AppDrawer = ({ open, handleClose, handleOpen, isHome, menu, logo }) => {
             menu.map((item, index) => (
               <Button
                 onClick={() => {
-                  if (!isHome) {
-                    navigate("/")
-                  } else {
-                    item.scrollFunction()
-                  }
+                  scrollIntoViewHelper(item.reference)
                 }}
                 key={index}
               >

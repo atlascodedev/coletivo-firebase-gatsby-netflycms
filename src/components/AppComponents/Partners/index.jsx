@@ -87,8 +87,6 @@ function Partners(props) {
     }
   }, [])
 
-  console.log(partners)
-
   return (
     <PartnersRootContainer>
       <PartnerSectionTitle>Nossos parceiros</PartnerSectionTitle>

@@ -7,6 +7,12 @@ import stepperSvg from "../../../images/stepper-svg.svg"
 const OurTeamRootContainer = styled.div`
   background-color: #f3f3f3;
   font-family: "Barlow";
+  padding-top: 1em;
+  padding-bottom: 2.5em;
+
+  @media (min-width: 1024px) {
+    padding-bottom: 6em;
+  }
 `
 
 const OurTeamGridContainer = styled.div`
@@ -225,8 +231,6 @@ function OurTeam(props) {
 
     setTeamMembersArray(teamMembers)
   }, [])
-
-  console.log(teamMembersArray)
 
   return (
     <OurTeamRootContainer>

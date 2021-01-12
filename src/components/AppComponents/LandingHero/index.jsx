@@ -128,7 +128,17 @@ const HeroTextMainText = styled.div`
   }
 `
 
-function LandingHero(props) {
+function LandingHero({ ctaRef }) {
+  console.log(ctaRef)
+
+  const [cta, setCta] = React.useState(null)
+
+  React.useEffect(() => {
+    if (ctaRef) {
+      setCta(ctaRef.current)
+    }
+  }, [])
+
   return (
     <div>
       <LandingBackgroundHero image={landingBg}>
@@ -156,7 +166,11 @@ function LandingHero(props) {
                 </div>
 
                 <div className={"ctaButton"}>
-                  <Button variant="contained" color="secondary">
+                  <Button
+                    onClick={() => cta.scrollIntoView({ behavior: "smooth" })}
+                    variant="contained"
+                    color="secondary"
+                  >
                     Fale conosco
                   </Button>
                 </div>

@@ -43,7 +43,7 @@ function IndexPage(props) {
   return (
     <AppLayout menu={menu}>
       <div ref={landingRef}>
-        <LandingHero />
+        <LandingHero ctaRef={contactRef} />
       </div>
       <div ref={aboutUsRef}>
         <AboutUs />
