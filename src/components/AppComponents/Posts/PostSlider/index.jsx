@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import SwiperCore, {
   Navigation,
   Pagination,
@@ -10,6 +11,20 @@ import SwiperCore, {
 import { Swiper, SwiperSlide } from "swiper/react"
 import PostCard from "../PostCard"
 import "./slider.css"
+
+const NoPostContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 800;
+  width: 100%;
+  margin-left: 20px;
+
+  @media (min-width: 1024px) {
+    margin-left: 0px;
+  }
+`
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade])
 
@@ -62,18 +77,9 @@ function PostSlider({ postData }) {
           ))}
         </Swiper>
       ) : (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            fontSize: "22px",
-            fontWeight: "800",
-            width: "100%",
-            marginLeft: "20px",
-          }}
-        >
+        <NoPostContainer>
           <p>Nenhum post foi encontrado</p>
-        </div>
+        </NoPostContainer>
       )}
     </div>
   )

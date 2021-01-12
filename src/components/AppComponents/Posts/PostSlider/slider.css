@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #swiper-1 .swiper-pagination {
@@ -16,6 +16,7 @@
 @media (min-width: 1024px) {
   #swiper-1 .swiper-slide {
     width: 33.3333%;
+    align-items: center;
   }
 
   #swiper-1.swiper-container {

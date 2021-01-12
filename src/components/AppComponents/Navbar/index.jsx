@@ -15,6 +15,7 @@ import { useLocation } from "@reach/router"
 import { navigate } from "gatsby"
 import { Menu } from "@material-ui/icons"
 import scrollIntoViewHelper from "../../../helper/scrollIntoView"
+import returnHome from "../../../helper/returnHome"
 
 const AtlasAppBarBase = styled.div`
   display: flex;
@@ -127,18 +128,6 @@ function Navbar({ minHeight, height, logo, menu }) {
   const appBarHeight = height ? height : 0
 
   React.useEffect(() => {
-    if (menu) {
-      for (let index = 0; index < menu.length; index++) {
-        menu[index].scrollFunction = () =>
-          menu[index].reference.current.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          })
-      }
-    }
-  }, [])
-
-  React.useEffect(() => {
     if (isHome) {
       global.window.addEventListener("scroll", () => {
         if (global.window.scrollY > 1) {
@@ -161,6 +150,7 @@ function Navbar({ minHeight, height, logo, menu }) {
       >
         <AtlasAppBarItemContainer top={isTop}>
           <AtlasAppBarLogo
+            onClick={returnHome}
             top={isTop}
             src={logo ? logo : "https://via.placeholder.com/100"}
           />
@@ -186,7 +176,10 @@ function Navbar({ minHeight, height, logo, menu }) {
                     <li
                       key={index}
                       onClick={() => {
-                        scrollIntoViewHelper(menuItem.reference)
+                        scrollIntoViewHelper(
+                          menuItem.reference,
+                          menuItem.menuName
+                        )
                       }}
                       onMouseEnter={() => {
                         global.window.document.querySelector(
@@ -271,7 +264,7 @@ const AppDrawer = ({ open, handleClose, handleOpen, isHome, menu, logo }) => {
             menu.map((item, index) => (
               <Button
                 onClick={() => {
-                  scrollIntoViewHelper(item.reference)
+                  scrollIntoViewHelper(item.reference, item.menuName)
                 }}
                 key={index}
               >

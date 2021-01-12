@@ -6,18 +6,21 @@ import styled from "styled-components"
 const PostCardContainer = styled.div`
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  width: 252px;
-  height: 288px;
+  width: 212px;
+  height: 310px;
   padding: 1em;
   padding-top: 0.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Barlow";
+  margin-top: 18px;
 
   @media (min-width: 1024px) {
     width: 278.99px;
     height: 378.16px;
+    margin-top: 0px;
+    margin-bottom: 18px;
   }
 `
 

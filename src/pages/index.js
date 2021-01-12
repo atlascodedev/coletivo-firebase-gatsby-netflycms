@@ -18,27 +18,34 @@ function IndexPage(props) {
     {
       menuName: "Home",
       reference: landingRef,
-      scrollFunction: null,
     },
 
     {
       menuName: "Sobre nós",
       reference: aboutUsRef,
-      scrollFunction: null,
     },
 
     {
       menuName: "Novidades",
       reference: postsRef,
-      scrollFunction: null,
     },
 
     {
       menuName: "Contato",
       reference: contactRef,
-      scrollFunction: null,
     },
   ]
+
+  React.useEffect(() => {
+    if (props.location.state.restore) {
+      global.window.scrollTo({
+        behavior: "smooth",
+        top: props.location.state.value,
+      })
+    } else {
+      return
+    }
+  }, [])
 
   return (
     <AppLayout menu={menu}>
@@ -60,7 +67,7 @@ function IndexPage(props) {
         <Partners />
       </div>
 
-      <div ref={contactRef}>
+      <div id="contato" ref={contactRef}>
         <CourseContactForm />
       </div>
     </AppLayout>
