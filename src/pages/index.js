@@ -14,6 +14,8 @@ function IndexPage(props) {
   const postsRef = React.useRef(null)
   const aboutUsRef = React.useRef(null)
 
+  const [locationState, setLocationState] = React.useState(null)
+
   const menu = [
     {
       menuName: "Home",
@@ -37,13 +39,17 @@ function IndexPage(props) {
   ]
 
   React.useEffect(() => {
-    if (props.location.state.restore) {
-      global.window.scrollTo({
-        behavior: "smooth",
-        top: props.location.state.value,
-      })
-    } else {
-      return
+    try {
+      if (props.location.state.restore !== null) {
+        global.window.scrollTo({
+          behavior: "smooth",
+          top: props.location.state.value,
+        })
+      } else {
+        return
+      }
+    } catch (error) {
+      console.log(error)
     }
   }, [])
 

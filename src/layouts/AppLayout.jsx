@@ -26,7 +26,7 @@ function AppLayout({ children, menu }) {
 
   // JSON.stringify(menuItemsScrollsPosY)
 
-  localStorage.setItem("menuScrollPosY", JSON.stringify(menuItemsScrollsPosY))
+  // localStorage.setItem("menuScrollPosY", JSON.stringify(menuItemsScrollsPosY))
 
   return (
     <React.Fragment>
