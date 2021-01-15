@@ -2,11 +2,11 @@ import { navigate } from "gatsby"
 import convertToSlug from "./converToSlug"
 import scrollPolyfill from "./scrollPolyfill"
 
-const isChrome = global.window.navigator.userAgent.includes("Chrome")
-const smoothScrollSupport =
-  "scrollBehavior" in global.window.document.documentElement.style
-
 const scrollIntoViewHelper = (ref = null, menuName, callback = null) => {
+  const isChrome = global.window.navigator.userAgent.includes("Chrome")
+  const smoothScrollSupport =
+    "scrollBehavior" in global.window.document.documentElement.style
+
   if (global.window.location.pathname === "/") {
     if (isChrome || !smoothScrollSupport) {
       scrollPolyfill(`#${convertToSlug(menuName).toLowerCase()}`)

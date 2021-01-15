@@ -7,6 +7,7 @@ import SwiperCore, {
   A11y,
   Autoplay,
   EffectFade,
+  Lazy,
 } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 import PostCard from "../PostCard"
@@ -26,7 +27,15 @@ const NoPostContainer = styled.div`
   }
 `
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade])
+SwiperCore.use([
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+  EffectFade,
+  Lazy,
+])
 
 function PostSlider({ postData }) {
   const [postSlide, setPostSlides] = React.useState([])
@@ -51,6 +60,7 @@ function PostSlider({ postData }) {
     <div>
       {postSlide.length > 0 ? (
         <Swiper
+          lazy
           id="swiper-1"
           slidesPerView={1}
           pagination={{ clickable: true }}

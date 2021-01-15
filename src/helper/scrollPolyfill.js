@@ -2,21 +2,18 @@ const nativeSmoothScrollTo = elem => {
   window.scroll({
     behavior: "smooth",
     left: 0,
-    top: elem.getBoundingClientRect().top + window.pageYOffset,
+    top: elem.getBoundingClientRect().top + global.window.pageYOffset,
   })
 }
 
-// polyfilled smooth scrolling for IE, Edge & Safari
 const smoothScrollTo = (to, duration) => {
-  const element = document.scrollingElement || document.documentElement,
+  const element =
+      global.window.document.scrollingElement ||
+      global.window.document.documentElement,
     start = element.scrollTop,
     change = to - start,
     startDate = +new Date()
 
-  // t = current time
-  // b = start value
-  // c = change in value
-  // d = duration
   const easeInOutQuad = (t, b, c, d) => {
     t /= d / 2
     if (t < 1) return (c / 2) * t * t + b
@@ -39,17 +36,21 @@ const smoothScrollTo = (to, duration) => {
   animateScroll()
 }
 
-// detect support for the behavior property in ScrollOptions
-const supportsNativeSmoothScroll =
-  "scrollBehavior" in document.documentElement.style
+let supportsNativeSmoothScroll
 
-// smooth scrolling stub
+if (typeof window === "undefined") {
+  supportsNativeSmoothScroll = null
+} else {
+  supportsNativeSmoothScroll =
+    "scrollBehavior" in global.window.document.documentElement.style
+}
+
 const scrollToElem = elemSelector => {
   if (!elemSelector) {
     return
   }
 
-  const elem = document.querySelector(elemSelector)
+  const elem = global.window.document.querySelector(elemSelector)
   if (elem) {
     if (supportsNativeSmoothScroll) {
       nativeSmoothScrollTo(elem)

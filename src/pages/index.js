@@ -7,6 +7,7 @@ import Posts from "../components/AppComponents/Posts"
 import OurTeam from "../components/AppComponents/OurTeam"
 import Partners from "../components/AppComponents/Partners"
 import CourseContactForm from "../components/AppComponents/ContactFormMain"
+import scrollPolyfill from "../helper/scrollPolyfill"
 
 function IndexPage(props) {
   const landingRef = React.useRef(null)
@@ -39,8 +40,6 @@ function IndexPage(props) {
   ]
 
   React.useEffect(() => {
-    console.log(props.location.state)
-
     let nullStateLocationError = new Error(
       "Gatsby location state is null or undefined"
     )
@@ -48,14 +47,12 @@ function IndexPage(props) {
     try {
       if (props.location.state == null || props.location.state == undefined) {
         throw nullStateLocationError
-      }
-
-      if (props.location.state.restore !== null) {
+      } else if (props.location.state.restore == null) {
+        throw new Error("Restore state could not be found in Gatsby location")
+      } else {
         document
           .querySelector(`#${props.location.state.value}`)
           .scrollIntoView()
-      } else {
-        return
       }
     } catch (error) {
       if (error) {

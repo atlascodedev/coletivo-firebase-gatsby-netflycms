@@ -18,6 +18,7 @@ require("swiper/components/pagination/pagination.min.css")
 require("swiper/components/scrollbar/scrollbar.min.css")
 require("swiper/components/effect-fade/effect-fade.min.css")
 require("swiper/components/scrollbar/scrollbar.min.css")
+require("swiper/components/lazy/lazy.min.css")
 
 const app = firebase.initializeApp(firebaseConfig)
 

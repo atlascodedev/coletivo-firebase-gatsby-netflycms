@@ -10,6 +10,7 @@ import React from "react"
 import styled from "styled-components"
 import fancyBgMobile from "../../../images/rectagle-bg.svg"
 import peopleGroup from "../../../images/people-group.png"
+import LazyLoad from "react-lazyload"
 
 const FancyBackground = styled.div`
   position: relative;
@@ -120,9 +121,11 @@ function AboutUs(props) {
       <FancyBackground image={fancyBgMobile}>
         <Container>
           <AboutUsGrid>
-            <AboutUsPictureContainer>
-              <AboutUsPicture src={peopleGroup} />
-            </AboutUsPictureContainer>
+            <LazyLoad>
+              <AboutUsPictureContainer>
+                <AboutUsPicture src={peopleGroup} />
+              </AboutUsPictureContainer>
+            </LazyLoad>
 
             <AboutUsTextContainer>
               <h3>Sobre nós</h3>

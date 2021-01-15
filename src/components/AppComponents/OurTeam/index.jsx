@@ -1,6 +1,7 @@
 import { Container } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import LazyLoad from "react-lazyload"
 import styled from "styled-components"
 import stepperSvg from "../../../images/stepper-svg.svg"
 
@@ -123,20 +124,22 @@ const TeamMemberCardInnerContainer = styled.div`
 const TeamMemberCard = ({ img, name, position }) => {
   return (
     <TeamMemberCardBase>
-      <TeamMemberCardInnerContainer>
-        <TeamMemberCardImage
-          src={
-            img
-              ? img
-              : "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=150"
-          }
-        />
+      <LazyLoad>
+        <TeamMemberCardInnerContainer>
+          <TeamMemberCardImage
+            src={
+              img
+                ? img
+                : "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=150"
+            }
+          />
 
-        <TeamMemberCardInfo className={"cardMemberInfo"}>
-          <h5>{name ? name : "Placeholder Name"}</h5>
-          <div>{position ? position : "Placeholder Position"}</div>
-        </TeamMemberCardInfo>
-      </TeamMemberCardInnerContainer>
+          <TeamMemberCardInfo className={"cardMemberInfo"}>
+            <h5>{name ? name : "Placeholder Name"}</h5>
+            <div>{position ? position : "Placeholder Position"}</div>
+          </TeamMemberCardInfo>
+        </TeamMemberCardInnerContainer>
+      </LazyLoad>
     </TeamMemberCardBase>
   )
 }

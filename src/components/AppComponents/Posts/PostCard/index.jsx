@@ -1,6 +1,7 @@
 import { Button } from "@material-ui/core"
 import { Link } from "gatsby"
 import React from "react"
+import LazyLoad from "react-lazyload"
 import styled from "styled-components"
 
 const PostCardContainer = styled.div`
@@ -92,11 +93,14 @@ const PostCard = ({ image, title, date, excerpt, link }) => {
   return (
     <div>
       <PostCardContainer>
-        <PostCardImageContainer>
-          <PostCardImage
-            src={image ? image : "https://via.placeholder.com/150"}
-          ></PostCardImage>
-        </PostCardImageContainer>
+        <LazyLoad>
+          <PostCardImageContainer>
+            <PostCardImage
+              src={image ? image : "https://via.placeholder.com/150"}
+            ></PostCardImage>
+          </PostCardImageContainer>
+        </LazyLoad>
+
         <PostInfoContainer>
           <PostCardTitle>
             {title ? title : "Placeholder title goes here "}
