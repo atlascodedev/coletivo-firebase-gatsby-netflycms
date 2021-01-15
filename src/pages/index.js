@@ -39,29 +39,40 @@ function IndexPage(props) {
   ]
 
   React.useEffect(() => {
+    console.log(props.location.state)
+
+    let nullStateLocationError = new Error(
+      "Gatsby location state is null or undefined"
+    )
+
     try {
+      if (props.location.state == null || props.location.state == undefined) {
+        throw nullStateLocationError
+      }
+
       if (props.location.state.restore !== null) {
-        global.window.scrollTo({
-          behavior: "smooth",
-          top: props.location.state.value,
-        })
+        document
+          .querySelector(`#${props.location.state.value}`)
+          .scrollIntoView()
       } else {
         return
       }
     } catch (error) {
-      console.log(error)
+      if (error) {
+        return
+      }
     }
   }, [])
 
   return (
     <AppLayout menu={menu}>
-      <div ref={landingRef}>
+      <div id="home" ref={landingRef}>
         <LandingHero ctaRef={contactRef} />
       </div>
-      <div ref={aboutUsRef}>
+      <div id="sobre-nos" ref={aboutUsRef}>
         <AboutUs />
       </div>
-      <div ref={postsRef}>
+      <div id="novidades" ref={postsRef}>
         <Posts />
       </div>
 

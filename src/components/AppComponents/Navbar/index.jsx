@@ -80,6 +80,7 @@ const AtlasAppBarItemList = styled.ul`
 `
 
 const AtlasAppBarLogo = styled.img`
+  cursor: pointer;
   width: 145px;
   height: 100%;
   flex-grow: 0;
@@ -163,7 +164,10 @@ function Navbar({ minHeight, height, logo, menu }) {
               width={"100%"}
               onClick={() => setDrawerOpen(true)}
             >
-              <IconButton edge="start">
+              <IconButton
+                style={{ marginLeft: "auto", padding: "25px" }}
+                edge="start"
+              >
                 <Menu />
               </IconButton>
             </Box>
@@ -264,7 +268,11 @@ const AppDrawer = ({ open, handleClose, handleOpen, isHome, menu, logo }) => {
             menu.map((item, index) => (
               <Button
                 onClick={() => {
-                  scrollIntoViewHelper(item.reference, item.menuName)
+                  scrollIntoViewHelper(
+                    item.reference,
+                    item.menuName,
+                    handleClose
+                  )
                 }}
                 key={index}
               >
