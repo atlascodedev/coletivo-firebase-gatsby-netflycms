@@ -6,9 +6,6 @@ const returnHome = () => {
       global.window.scrollTo(0, 0)
     } else {
       navigate("/")
-      setTimeout(() => {
-        global.window.scrollTo(500, 500)
-      }, 1500)
     }
   } catch (error) {
     console.log(error)
