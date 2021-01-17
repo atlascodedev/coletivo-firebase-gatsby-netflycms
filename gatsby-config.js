@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Coletivo Pro Cidadania`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `https://atlascode.dev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +15,13 @@ module.exports = {
       },
     },
     "gatsby-plugin-styled-components",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "uploads",
+        path: `${__dirname}/static/img`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,13 +36,7 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "uploads",
-        path: `${__dirname}/static/img`,
-      },
-    },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {

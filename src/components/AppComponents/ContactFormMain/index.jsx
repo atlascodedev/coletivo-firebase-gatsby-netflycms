@@ -21,6 +21,7 @@ import FormikField from "../../UtilityComponents/FormikField"
 import MaskInput from "../../UtilityComponents/MaskInput"
 import ConfirmationDialog from "../../UtilityComponents/ConfirmationDialog"
 import { graphql, useStaticQuery } from "gatsby"
+import axios from "axios"
 
 const validationSchema = Yup.object({
   name: Yup.string()
@@ -195,23 +196,26 @@ function CourseContactForm(props) {
           validationSchema={validationSchema}
           onSubmit={(values, actions) => {
             console.log(values.email, values.message, values.phone, values.name)
-            //   axiosAtlas
-            //     .post("/sendMail", {
-            //       name: values.name,
-            //       email: values.email,
-            //       message: values.message,
-            //       phone: values.phone,
-            //     })
-            //     .then(result => {
-            //       console.log(result)
-            //       actions.setSubmitting(false)
-            //       actions.resetForm()
-            //       handleDialogOpen()
-            //     })
-            //     .catch(error => {
-            //       console.log(error)
-            //       actions.setSubmitting(false)
-            //     })
+
+            axios
+              .post(
+                "https://us-central1-coletivoprocidadania-a52de.cloudfunctions.net/api/sendMail",
+                {
+                  name: values.name,
+                  email: values.email,
+                  message: values.message,
+                  phone: values.phone,
+                }
+              )
+              .then(result => {
+                actions.setSubmitting(false)
+                actions.resetForm()
+                handleDialogOpen()
+              })
+              .catch(error => {
+                console.log(error)
+                actions.setSubmitting(false)
+              })
           }}
         >
           {formik => (

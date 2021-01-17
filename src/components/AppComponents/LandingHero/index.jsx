@@ -3,6 +3,8 @@ import styled from "styled-components"
 import landingBg from "../../../images/svg-hero-front.svg"
 import heroImg from "../../../images/coletivo-hero-img.png"
 import { Button } from "@material-ui/core"
+import { graphql, useStaticQuery } from "gatsby"
+import GatsbyImage from "gatsby-image"
 
 const LandingBackgroundHero = styled.div`
   position: relative;
@@ -42,7 +44,7 @@ const LandingHeroImageContainer = styled.div`
   }
 `
 
-const LandingHeroImage = styled.img`
+const LandingHeroImage = styled(GatsbyImage)`
   width: 85%;
   height: 85%;
 
@@ -128,8 +130,20 @@ const HeroTextMainText = styled.div`
   }
 `
 
-function LandingHero({ ctaRef }) {
-  console.log(ctaRef)
+function LandingHero({ ctaRef, ...props }) {
+  const heroImgWebp = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "coletivo-hero-img.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(heroImgWebp)
 
   const [cta, setCta] = React.useState(null)
 
@@ -144,7 +158,10 @@ function LandingHero({ ctaRef }) {
       <LandingBackgroundHero image={landingBg}>
         <LandingHeroGridContainer>
           <LandingHeroImageContainer>
-            <LandingHeroImage src={heroImg} />
+            <LandingHeroImage
+              imgStyle={{ objectFit: "contain" }}
+              fluid={heroImgWebp.file.childImageSharp.fluid}
+            />
           </LandingHeroImageContainer>
 
           <LandingHeroTextContainer>

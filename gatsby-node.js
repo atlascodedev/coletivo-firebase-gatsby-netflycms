@@ -1,6 +1,9 @@
 const _ = require("lodash")
 const path = require("path")
-const { createFilePath } = require("gatsby-source-filesystem")
+const {
+  createFilePath,
+  createRemoteFileNode,
+} = require("gatsby-source-filesystem")
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
@@ -16,7 +19,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
 
-    type Frontmatter {
+    type Frontmatter @infer {
       templateKey: String
       contentType: String
       title: String
@@ -48,8 +51,49 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(typeDefs)
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = async ({
+  node,
+  actions,
+  getNode,
+  store,
+  cache,
+  createNodeId,
+}) => {
+  const { createNodeField, createNode } = actions
+
+  // if (
+  //   node.internal.type === "MarkdownRemark" &&
+  //   node.frontmatter.featuredimage !== null
+  // ) {
+  //   let fileNode = await createRemoteFileNode({
+  //     url: node.frontmatter.featuredimage,
+  //     parentNodeId: node.id,
+  //     createNode,
+  //     createNodeId,
+  //     cache,
+  //     store,
+  //   })
+
+  //   if (fileNode) {
+  //     node.featuredimage__NODE = fileNode.id
+  //   }
+  // }
+
+  if (
+    node.internal.type === "MarkdownRemark" &&
+    node.frontmatter.templateKey == "post" &&
+    node.frontmatter.featuredimage !== null
+  ) {
+    let optimizedImage =
+      node.frontmatter.featuredimage.split(".").splice(0, 1).join(".") +
+      "-thumbnail.webp"
+
+    createNodeField({
+      name: "processedImage",
+      value: optimizedImage,
+      node,
+    })
+  }
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
@@ -89,8 +133,6 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `)
     .then(result => {
-      console.log(result)
-
       if (result.errors) {
         result.errors.forEach(e => console.error(e.toString()))
         return Promise.reject(result.errors)
@@ -99,8 +141,6 @@ exports.createPages = ({ actions, graphql }) => {
       const posts = result.data.allMarkdownRemark.edges
 
       posts.forEach(edge => {
-        console.log(edge)
-
         if (edge.node.frontmatter.templateKey === "ignore") {
           return
         } else {
@@ -114,8 +154,6 @@ exports.createPages = ({ actions, graphql }) => {
           const markdown = edge.node.frontmatter.markdown
           const html = edge.node.html
           const slug = edge.node.fields.slug
-
-          console.log("****************************************", contentType)
 
           createPage({
             path: edge.node.fields.slug,
@@ -142,3 +180,9 @@ exports.createPages = ({ actions, graphql }) => {
       console.log("damn there was an error", error)
     })
 }
+
+exports.sourceNodes = async ({
+  actions,
+  createNodeId,
+  createContentDigest,
+}) => {}

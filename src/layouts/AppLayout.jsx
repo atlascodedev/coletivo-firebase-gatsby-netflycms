@@ -11,7 +11,6 @@ function AppLayout({ children, menu }) {
       <Navbar menu={menu} logo={logo} />
 
       <main>{children}</main>
-
       {/* <WhatsAppButton /> */}
       <Footer />
     </React.Fragment>

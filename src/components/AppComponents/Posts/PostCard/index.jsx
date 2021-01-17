@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import React from "react"
 import LazyLoad from "react-lazyload"
 import styled from "styled-components"
+import spinner from "../../../../images/lazy-loader-spinner.svg"
 
 const PostCardContainer = styled.div`
   background: #ffffff;
@@ -90,10 +91,12 @@ const PostCallToActionContainer = styled.div`
 `
 
 const PostCard = ({ image, title, date, excerpt, link }) => {
+  console.log(image, "this is the img path")
+
   return (
     <div>
       <PostCardContainer>
-        <LazyLoad>
+        <LazyLoad debounce={500}>
           <PostCardImageContainer>
             <PostCardImage
               src={image ? image : "https://via.placeholder.com/150"}

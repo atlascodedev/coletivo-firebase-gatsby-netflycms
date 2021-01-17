@@ -8,6 +8,7 @@ import OurTeam from "../components/AppComponents/OurTeam"
 import Partners from "../components/AppComponents/Partners"
 import CourseContactForm from "../components/AppComponents/ContactFormMain"
 import scrollPolyfill from "../helper/scrollPolyfill"
+import { graphql } from "gatsby"
 
 function IndexPage(props) {
   const landingRef = React.useRef(null)
@@ -15,7 +16,7 @@ function IndexPage(props) {
   const postsRef = React.useRef(null)
   const aboutUsRef = React.useRef(null)
 
-  const [locationState, setLocationState] = React.useState(null)
+  console.log(props)
 
   const menu = [
     {
@@ -89,3 +90,16 @@ function IndexPage(props) {
 }
 
 export default IndexPage
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "coletivo-hero-img.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 125, height: 125) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
