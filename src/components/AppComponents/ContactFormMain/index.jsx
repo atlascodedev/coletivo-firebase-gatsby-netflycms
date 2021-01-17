@@ -184,6 +184,7 @@ function CourseContactForm(props) {
     <div className={classes.primordialRoot}>
       <div className={classes.ancientRoot}>
         <ConfirmationDialog
+          type={"success"}
           title={"Mensagem enviada com sucesso"}
           message={
             "Obrigado pelo interesse! Sua mensagem foi enviada com sucesso, logo entraremos em contato com você através do número fornecido no formulário."
