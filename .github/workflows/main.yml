@@ -1,0 +1,41 @@
+name: Deploy to Netlify using Github Actions
+"on":
+  push:
+    branches:
+      - main
+jobs:
+  deploy_only:
+    runs-on: ubuntu-latest
+    if: ${{contains(github.event.head_commit.message, '[deploy]')}}
+    steps:
+      - name: Say Hello
+        run: echo "Hello Workflow test"
+        
+      - uses: actions/checkout@v2
+      - name: Install Netlify CLI
+        run: npm install netlify-cli
+        
+      - name: Deploy to Netlify
+        run: netlify deploy --prod --dir public --message "Site deployed from Githubactions ${{github.ref}}" --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}  --site ${{ secrets.NETLIFY_APP_ID }}
+      
+      - name: Finish
+        run: echo "iT jUsT wOrKs!!11
+        
+  
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    if: ${{!contains(github.event.head_commit.message, '[skip ci]')}}
+    steps:
+      - name: Install Netlify CLI 
+        run: npm install netlify-cli
+        
+      - uses: actions/checkout@v2
+      - name: Build
+        working-directory: ./
+        run: npm ci && npm run build
+      
+      - name: Deploy
+        run: netlify deploy --prod --dir public --message "Site deployed from Githubactions ${{github.ref}}" --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}  --site ${{ secrets.NETLIFY_APP_ID }}
+      
+      - name: Finish
+        run: echo 'it just works'
