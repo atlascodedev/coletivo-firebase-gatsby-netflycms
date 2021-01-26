@@ -61,14 +61,24 @@ exports.handler = async (event, context) => {
       return response
     }
 
-    const response = {
+    // const response = {
+    //   statusCode: 200,
+
+    //   body: JSON.stringify({
+    //     message: "Formulário de contato enviado com sucesso!",
+    //   }),
+    // }
+
+    return {
       statusCode: 200,
-      headers,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+      },
       body: JSON.stringify({
         message: "Formulário de contato enviado com sucesso!",
       }),
     }
-
-    return response
   })
 }
