@@ -40,16 +40,6 @@ SwiperCore.use([
 function PostSlider({ postData }) {
   const [postSlide, setPostSlides] = React.useState([])
 
-  // React.useEffect(() => {
-  //   let container = global.window.document.querySelector(".swiper-container")
-  //     .offsetHeight
-
-  //   let wrapper = global.window.document.querySelector(".swiper-wrapper")
-  //     .offsetHeight
-
-  //   console.log(`Wrapper: ${wrapper}  ---- Container: ${container}`)
-  // }, [])
-
   React.useEffect(() => {
     setPostSlides(postData)
   }, [postData])

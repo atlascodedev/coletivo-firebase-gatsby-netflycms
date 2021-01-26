@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import landingBg from "../../../images/svg-hero-front.svg"
-import heroImg from "../../../images/coletivo-hero-img.png"
+// import heroImg from "../../../images/coletivo-hero-img.png"
 import { Button } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import GatsbyImage from "gatsby-image"
