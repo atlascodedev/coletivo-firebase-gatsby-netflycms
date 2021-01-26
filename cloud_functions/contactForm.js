@@ -1,13 +1,5 @@
 const nodemailer = require("nodemailer")
 
-let transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.GMAIL_USERNAME,
-    pass: process.env.GMAIL_APP_PASS,
-  },
-})
-
 let envTest = process.env.TEST_VARIABLE
 
 exports.handler = async (event, context) => {
@@ -16,24 +8,20 @@ exports.handler = async (event, context) => {
   const formMessage = event.body.message
   const formPhone = event.body.phone
 
+  let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.GMAIL_USERNAME,
+      pass: process.env.GMAIL_APP_PASS,
+    },
+  })
+
   const headers = {
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Allow-Headers":
+      "Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Origin",
     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
   }
-
-  if (event.httpMethod !== "POST") {
-    let response = {
-      statusCode: 405,
-      body: JSON.stringify({
-        error: "Method not allowed.",
-      }),
-    }
-
-    return response
-  }
-
-  console.log(envTest)
 
   const mailOptions = {
     from: "Coletivo Pro Cidadania - Sistema <sistema@coletivoprocidadania.org>",
@@ -50,6 +38,17 @@ exports.handler = async (event, context) => {
         </div>`,
   }
 
+  if (event.httpMethod !== "POST") {
+    let response = {
+      statusCode: 405,
+      body: JSON.stringify({
+        error: "Method not allowed.",
+      }),
+    }
+
+    return response
+  }
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       const response = {
@@ -61,19 +60,12 @@ exports.handler = async (event, context) => {
       return response
     }
 
-    // const response = {
-    //   statusCode: 200,
-
-    //   body: JSON.stringify({
-    //     message: "Formulário de contato enviado com sucesso!",
-    //   }),
-    // }
-
     return {
       statusCode: 200,
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Headers":
+          "Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Origin",
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
       },
       body: JSON.stringify({
