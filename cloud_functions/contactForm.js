@@ -8,6 +8,12 @@ let transporter = nodemailer.createTransport({
   },
 })
 
+const headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Methods": "POST",
+}
+
 let envTest = process.env.TEST_VARIABLE
 
 exports.handler = async (event, context) => {
@@ -15,6 +21,17 @@ exports.handler = async (event, context) => {
   const formMail = event.body.email
   const formMessage = event.body.message
   const formPhone = event.body.phone
+
+  if (event.httpMethod !== "POST") {
+    let response = {
+      statusCode: 405,
+      body: JSON.stringify({
+        error: "Method not allowed.",
+      }),
+    }
+
+    return response
+  }
 
   console.log(envTest)
 
@@ -37,6 +54,7 @@ exports.handler = async (event, context) => {
     if (error) {
       const response = {
         statusCode: 500,
+        headers,
         body: JSON.stringify({
           error: error.message,
         }),
@@ -46,6 +64,7 @@ exports.handler = async (event, context) => {
 
     const response = {
       statusCode: 200,
+      headers,
       body: JSON.stringify({
         message: "Formulário de contato enviado com sucesso!",
       }),

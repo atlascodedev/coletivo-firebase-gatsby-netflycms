@@ -200,7 +200,7 @@ function CourseContactForm(props) {
 
             axios
               .post(
-                "https://us-central1-coletivoprocidadania-a52de.cloudfunctions.net/api/sendMail",
+                "https://elegant-heyrovsky-1f6f39.netlify.app/.netlify/functions/contactForm",
                 {
                   name: values.name,
                   email: values.email,
