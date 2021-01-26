@@ -1,18 +1,22 @@
-exports.handler = async (event, context, callback) => {
-  const nodemailer = require("nodemailer")
+const nodemailer = require("nodemailer")
 
+let transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL_USERNAME,
+    pass: process.env.GMAIL_APP_PASS,
+  },
+})
+
+let envTest = process.env.TEST_VARIABLE
+
+exports.handler = async (event, context) => {
   const formName = event.body.name
   const formMail = event.body.email
   const formMessage = event.body.message
   const formPhone = event.body.phone
 
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.GMAIL_USERNAME,
-      pass: process.env.GMAIL_APP_PASS,
-    },
-  })
+  console.log(envTest)
 
   const mailOptions = {
     from: "Coletivo Pro Cidadania - Sistema <sistema@coletivoprocidadania.org>",
@@ -37,7 +41,7 @@ exports.handler = async (event, context, callback) => {
           error: error.message,
         }),
       }
-      callback(null, response)
+      return response
     }
 
     const response = {
@@ -47,6 +51,6 @@ exports.handler = async (event, context, callback) => {
       }),
     }
 
-    callback(null, response)
+    return response
   })
 }
