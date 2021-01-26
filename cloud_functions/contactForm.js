@@ -1,6 +1,11 @@
 exports.handler = async (event, context, callback) => {
   const nodemailer = require("nodemailer")
 
+  const formName = event.body.name
+  const formMail = event.body.email
+  const formMessage = event.body.message
+  const formPhone = event.body.phone
+
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
