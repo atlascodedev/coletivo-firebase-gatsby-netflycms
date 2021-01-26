@@ -8,12 +8,6 @@ let transporter = nodemailer.createTransport({
   },
 })
 
-const headers = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "Content-Type",
-  "Access-Control-Allow-Methods": "POST",
-}
-
 let envTest = process.env.TEST_VARIABLE
 
 exports.handler = async (event, context) => {
@@ -21,6 +15,12 @@ exports.handler = async (event, context) => {
   const formMail = event.body.email
   const formMessage = event.body.message
   const formPhone = event.body.phone
+
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+  }
 
   if (event.httpMethod !== "POST") {
     let response = {
@@ -54,7 +54,6 @@ exports.handler = async (event, context) => {
     if (error) {
       const response = {
         statusCode: 500,
-        headers,
         body: JSON.stringify({
           error: error.message,
         }),
