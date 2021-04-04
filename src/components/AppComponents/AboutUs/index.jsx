@@ -9,6 +9,7 @@ import {
 import React from "react"
 import styled from "styled-components"
 import fancyBgMobile from "../../../images/rectagle-bg.svg"
+import fancyBG from "../../../images/green-rect.svg"
 import peopleGroup from "../../../images/people-group.png"
 import LazyLoad from "react-lazyload"
 
@@ -118,7 +119,7 @@ function AboutUs(props) {
 
   return (
     <div>
-      <FancyBackground image={fancyBgMobile}>
+      <FancyBackground image={fancyBG}>
         <Container>
           <AboutUsGrid>
             <LazyLoad>

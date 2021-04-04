@@ -7,10 +7,19 @@ import {
   TimelineSeparator,
 } from "@material-ui/lab"
 import React from "react"
+import styled from "styled-components"
 
 interface Props {
   timelineText: any
 }
+
+const TimelineItemContainer = styled.div`
+  font-size: 16px;
+
+  @media (min-width: 1024px) {
+    font-size: 22px;
+  }
+`
 
 const TimelineCustomItem = ({ timelineText }: Props) => {
   return (
@@ -22,7 +31,9 @@ const TimelineCustomItem = ({ timelineText }: Props) => {
         />
       </TimelineSeparator>
 
-      <TimelineContent>{timelineText}</TimelineContent>
+      <TimelineContent>
+        <TimelineItemContainer>{timelineText}</TimelineItemContainer>
+      </TimelineContent>
     </TimelineItem>
   )
 }

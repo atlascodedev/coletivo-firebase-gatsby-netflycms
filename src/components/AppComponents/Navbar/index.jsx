@@ -84,9 +84,14 @@ const AtlasAppBarLogo = styled.img`
   width: 145px;
   height: 100%;
   flex-grow: 0;
+
+  padding: ${props => (props.top ? "15px" : "15px")};
+
   margin-left: ${props => (props.top ? "2px" : "2px")};
   transition: all 0.5s ease;
   @media (min-width: 768px) {
+    padding: ${props => (props.top ? "25px" : "5px")};
+
     margin-left: ${props => (props.top ? "2em" : "20px")};
     width: ${props => (props.top ? "350px" : "100px")};
     height: ${props => (props.top ? "150px" : "100%")};

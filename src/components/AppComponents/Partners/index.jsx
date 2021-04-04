@@ -34,7 +34,7 @@ const PartnerCardContainer = styled.div`
       ? `url(${props.img})`
       : "url(https://via.placeholder.com/232x148)"};
 
-  background-size: cover;
+  background-size: 75%;
   background-repeat: no-repeat;
   background-position: center center;
 `
@@ -87,64 +87,34 @@ function Partners(props) {
     }
   }, [])
 
+  console.log(partners)
+
   return (
     <PartnersRootContainer>
       <PartnerSectionTitle>Nossos parceiros</PartnerSectionTitle>
 
       <Swiper
         id="swiper-partner"
-        slidesPerView={1}
+        slidesPerView={partners && partners.length < 4 ? partners.length : 4}
         noSwiping
         noSwipingClass={"no-swipe"}
-        autoplay={{
-          delay: 0,
-          waitForTransition: false,
-          disableOnInteraction: false,
-        }}
         speed={3000}
-        loop={true}
+        autoplay={{}}
         breakpoints={{
           1024: {
-            autoplay: {
-              delay: 0,
-              disableOnInteraction: false,
-            },
-            slidesPerView: 4,
+            slidesPerView:
+              partners && partners.length < 4 ? partners.length : 4,
             speed: 3000,
-            loop: true,
           },
         }}
       >
-        <SwiperSlide className={"no-swipe"}>
-          <PartnerCardContainer />
-        </SwiperSlide>
-        <SwiperSlide className={"no-swipe"}>
-          <PartnerCardContainer />
-        </SwiperSlide>
-        <SwiperSlide className={"no-swipe"}>
-          <PartnerCardContainer />
-        </SwiperSlide>
-        <SwiperSlide className={"no-swipe"}>
-          <PartnerCardContainer />
-        </SwiperSlide>
-        <SwiperSlide className={"no-swipe"}>
-          <PartnerCardContainer />
-        </SwiperSlide>{" "}
-        <SwiperSlide className={"no-swipe"}>
-          <PartnerCardContainer />
-        </SwiperSlide>
-        <SwiperSlide className={"no-swipe"}>
-          <PartnerCardContainer />
-        </SwiperSlide>
-        <SwiperSlide className={"no-swipe"}>
-          <PartnerCardContainer />
-        </SwiperSlide>
-        <SwiperSlide className={"no-swipe"}>
-          <PartnerCardContainer />
-        </SwiperSlide>
-        <SwiperSlide className={"no-swipe"}>
-          <PartnerCardContainer />
-        </SwiperSlide>
+        {partners.map((value, index) => {
+          return (
+            <SwiperSlide key={index} className={"no-swipe"}>
+              <PartnerCardContainer img={value.partnerLogo} />
+            </SwiperSlide>
+          )
+        })}
       </Swiper>
     </PartnersRootContainer>
   )

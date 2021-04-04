@@ -12,8 +12,9 @@ const OurTeamV2Root = styled.div`
   background-position: center center;
   height: auto;
   background-size: cover;
+  font-family: "Barlow";
 
-  .MuiTimelineItem-missingOppositeContent:before {
+  /* .MuiTimelineItem-missingOppositeContent:before {
     flex: 0;
   }
 
@@ -22,6 +23,16 @@ const OurTeamV2Root = styled.div`
 
     @media (min-width: 1024px) {
       max-width: 50%;
+    }
+  } */
+
+  .timelineItem {
+    font-size: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    .timelineItem {
+      font-size: 22px;
     }
   }
 `
@@ -79,7 +90,7 @@ const OurTeamV2 = () => {
       <OurTeamV2Container>
         <OurTeamV2SectionTitle>Atendimento e inclusão</OurTeamV2SectionTitle>
 
-        <Timeline align="left">
+        <Timeline align="alternate">
           {connectorArray.map((item, index) => {
             return <TimelineCustomItem key={index} timelineText={item} />
           })}

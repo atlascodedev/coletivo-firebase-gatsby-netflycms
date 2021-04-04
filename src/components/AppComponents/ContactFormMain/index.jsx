@@ -82,6 +82,9 @@ const useStyles = makeStyles(theme => ({
   },
 
   formMain: {
+    marginTop: "15%",
+    marginBottom: "15%",
+    maxWidth: "450px",
     width: "90%",
     [theme.breakpoints.up("sm")]: {
       width: "100%",
