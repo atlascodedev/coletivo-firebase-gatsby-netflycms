@@ -98,9 +98,8 @@ const HeroTextMainText = styled.div`
     width: 80%;
     & > h1 {
       margin: 0;
-      & > span {
-        color: #28aead;
-      }
+
+      color: #22a7aa;
     }
   }
 
@@ -168,17 +167,14 @@ function LandingHero({ ctaRef, ...props }) {
             <LandingHeroTextInnerContainer>
               <HeroTextMainText>
                 <div>
-                  <h1>
-                    Transformando a sociedade através da{" "}
-                    <span>cidadania cultural</span>{" "}
-                  </h1>
+                  <h1>Elaboração e assessoria integral em projetos</h1>
                 </div>
 
                 <div className={"secondaryText"}>
                   <p>
-                    Temos como princípio a prática de políticas inclusivas, além
-                    de desenvolver ações para fortalecer os grupos mais expostos
-                    da sociedade
+                    O Instituto Gaúcho Pró-Cidadania trabalha em parceria com o
+                    poder público e a sociedade civil em ações e projetos na
+                    promoção da cidadania.
                   </p>
                 </div>
 

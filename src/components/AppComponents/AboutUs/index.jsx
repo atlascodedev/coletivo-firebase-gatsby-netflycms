@@ -130,22 +130,28 @@ function AboutUs(props) {
             <AboutUsTextContainer>
               <h3>Sobre nós</h3>
               <div>
-                Somos uma associação sem fins lucrativos que atua na região do
-                Vale do Rio Paranhana e entorno. O Coletivo tem por finalidades,
-                entre outras, promover a cidadania e os direitos sociais, com
-                ênfase na equidade de gênero e na igualdade racial, incentivar a
-                cultura e o esporte locais, estimular o interesse pelo
-                patrimônio histórico, estimular os regimes de trabalho
-                associativista, cooperativista e de auto-gestão solidária junto
-                às populações expostas a vulnerabilidades econômico-sociais.
+                Somos uma associação sem fins lucrativos, que nasceu como a
+                Escola de Samba Mocidade Independente Jardim do Prado, e em 2019
+                passou por uma reforma estatutária e assim ampliou sua atuação.
+                Atualmente, elabora e executa projetos e ações no Corede
+                Paranhana - Encosta da Serra.
               </div>
-              <Button
+
+              <div style={{ marginTop: "25px" }}>
+                O Instituto Gaúcho Pró-Cidadania tem a finalidade de elaborar
+                projetos e ações na promoção da cidadania em diversos setores da
+                sociedade, em especial da cultura, da educação, do esporte, do
+                turismo e do lazer. Desde 2012, houve muitos projetos e ações em
+                parceria com o poder público, sempre visando o crescimento
+                intelectual, financeiro e cultural da comunidade local.
+              </div>
+              {/* <Button
                 onClick={() => setAboutUsDialog(true)}
                 style={{ color: "#fff", border: "2px solid #fff" }}
                 variant="outlined"
               >
                 Nosso estatuto
-              </Button>
+              </Button> */}
             </AboutUsTextContainer>
           </AboutUsGrid>
         </Container>

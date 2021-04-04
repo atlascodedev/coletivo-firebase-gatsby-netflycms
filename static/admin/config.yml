@@ -11,8 +11,8 @@ backend:
 media_folder: static/img
 public_folder: /img
 locale: pt
-display_url: "http://coletivoprocidadania.org/"
-site_url: "http://coletivoprocidadania.org/"
+display_url: "http://pro-cidadania.org"
+site_url: "http://pro-cidadania.org"
 logo_url: "https://i.imgur.com/T3mdTTK.png"
 slug:
   clean_accents: true

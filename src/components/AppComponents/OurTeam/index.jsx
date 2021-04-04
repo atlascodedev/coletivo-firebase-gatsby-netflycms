@@ -239,7 +239,7 @@ function OurTeam(props) {
     <OurTeamRootContainer>
       <Container>
         <OurTeamGridContainer>
-          <OurTeamPhotosContainer>
+          {/* <OurTeamPhotosContainer>
             <h3>Equipe</h3>
             <OurTeamPhotosInnerContainer>
               {teamMembersArray.map((member, index) => (
@@ -251,7 +251,7 @@ function OurTeam(props) {
                 />
               ))}
             </OurTeamPhotosInnerContainer>
-          </OurTeamPhotosContainer>
+          </OurTeamPhotosContainer> */}
           <OurTeamTextContainer>
             <OurTeamStepperSvg src={stepperSvg} />
             <OurTeamTextInnerContainer>

@@ -9,14 +9,18 @@ import Partners from "../components/AppComponents/Partners"
 import CourseContactForm from "../components/AppComponents/ContactFormMain"
 import scrollPolyfill from "../helper/scrollPolyfill"
 import { graphql } from "gatsby"
+import OurTeamV2 from "../components/AppComponents/OurTeam_v2"
 
-function IndexPage(props) {
+export type MenuItem = {
+  menuName: string
+  reference: React.RefObject<HTMLElement> | null
+}
+
+const IndexPage: React.FC<any> = props => {
   const landingRef = React.useRef(null)
   const contactRef = React.useRef(null)
   const postsRef = React.useRef(null)
   const aboutUsRef = React.useRef(null)
-
-  console.log(props)
 
   const menu = [
     {
@@ -75,7 +79,7 @@ function IndexPage(props) {
       </div>
 
       <div>
-        <OurTeam />
+        <OurTeamV2 />
       </div>
 
       <div>
