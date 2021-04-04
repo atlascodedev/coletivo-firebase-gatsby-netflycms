@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
     // flexDirection:
 
     [theme.breakpoints.up("sm")]: {
-      justifyContent: "space-around",
+      justifyContent: "center",
       alignItems: "center",
       flexDirection: "row",
     },
@@ -348,20 +348,41 @@ function CourseContactForm(props) {
         display="flex"
         flexDirection="column"
         fontFamily="Barlow"
+        textAlign="center"
       >
-        <Box py={2} fontSize={{ xs: "30px", md: "35px" }} fontWeight="700">
-          Vale do Rio Paranhana - RS
+        <Box
+          py={2}
+          color={"#17396B"}
+          fontSize={{ xs: "15px", md: "20px" }}
+          fontWeight="700"
+          textAlign="center"
+          display="flex"
+          justifyContent="center"
+          flexDirection="column"
+          alignItems="center"
+        >
+          Endereço:
+          <Box
+            py={1}
+            width={{ xs: "100%", md: "50%" }}
+            color="#333"
+            fontSize={{ xs: "15px", md: "20px" }}
+          >
+            Rua Erechim, 2595 - Bairro Jardim do Prado Taquara/RS - 95600-554
+          </Box>
         </Box>
 
         <Box
           py={2}
           display="flex"
           flexDirection="column"
-          fontSize={{ xs: "20px", md: "25px" }}
+          fontSize={{ xs: "15px", md: "20px" }}
           fontWeight="600"
         >
-          <Box py={1}>Telefones:</Box>
-          {phoneOne ? <Box py={1}>{phoneOne}</Box> : null}
+          <Box fontWeight={"700"} color={"#17396b"} py={1}>
+            Telefones:
+          </Box>
+          <Box py={1}>{"(51) 99346.9700"}</Box>
           {phoneTwo ? <Box py={1}>{phoneTwo}</Box> : null}
         </Box>
 
@@ -369,17 +390,19 @@ function CourseContactForm(props) {
           py={2}
           flexDirection="column"
           display="flex"
-          fontSize={{ xs: "20px", md: "25px" }}
+          fontSize={{ xs: "15px", md: "20px" }}
           fontWeight="600"
         >
-          <Box py={1}>E-mail:</Box>
+          <Box color={"#17396b"} fontWeight={"700"} py={1}>
+            E-mail:
+          </Box>
 
-          {mailOne ? <Box py={1}>{mailOne}</Box> : null}
+          <Box py={1}>{"contato@pro-cidadania.org"}</Box>
 
           {mailTwo ? <Box py={1}>{mailTwo} </Box> : null}
         </Box>
 
-        <Box py={1} display="flex">
+        <Box py={1} display="flex" justifyContent="center">
           <Box
             className={classes.socialIcons}
             style={{ cursor: "pointer" }}

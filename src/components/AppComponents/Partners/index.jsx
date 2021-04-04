@@ -95,15 +95,14 @@ function Partners(props) {
 
       <Swiper
         id="swiper-partner"
-        slidesPerView={partners && partners.length < 4 ? partners.length : 4}
+        slidesPerView={1}
         noSwiping
         noSwipingClass={"no-swipe"}
         speed={3000}
-        autoplay={{}}
+        autoplay
         breakpoints={{
           1024: {
-            slidesPerView:
-              partners && partners.length < 4 ? partners.length : 4,
+            slidesPerView: 4,
             speed: 3000,
           },
         }}
