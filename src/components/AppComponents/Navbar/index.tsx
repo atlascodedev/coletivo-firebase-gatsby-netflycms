@@ -17,7 +17,7 @@ import { Menu } from "@material-ui/icons"
 import scrollIntoViewHelper from "../../../helper/scrollIntoView"
 import returnHome from "../../../helper/returnHome"
 
-const AtlasAppBarBase = styled.div`
+const AtlasAppBarBase = styled.div<AtlasAppBarHeightFixProps>`
   display: flex;
   width: 100%;
   background-color: ${props => (props.top ? "transparent" : "#fff")};
@@ -40,7 +40,11 @@ const AtlasAppBarBase = styled.div`
   }
 `
 
-const AtlasAppBarHeightFix = styled.div`
+interface AtlasAppBarHeightFixProps extends AtlasAppBarLogoProps {
+  minHeight?: string
+}
+
+const AtlasAppBarHeightFix = styled.div<AtlasAppBarHeightFixProps>`
   min-height: ${props => (props.minHeight ? props.minHeight : "60px")};
   height: ${props =>
     props.top ? "90px" : props.minHeight ? props.minHeight : "60px"};
@@ -56,7 +60,7 @@ const AtlasAppBarItemContainer = styled.div`
   width: 100%;
   transition: all 0.5 ease;
 `
-const AtlasAppBarItemList = styled.ul`
+const AtlasAppBarItemList = styled.ul<AtlasAppBarLogoProps>`
   list-style: none;
   display: flex;
   align-items: center;
@@ -79,7 +83,11 @@ const AtlasAppBarItemList = styled.ul`
   }
 `
 
-const AtlasAppBarLogo = styled.img`
+interface AtlasAppBarLogoProps {
+  top: boolean
+}
+
+const AtlasAppBarLogo = styled.img<AtlasAppBarLogoProps>`
   cursor: pointer;
   width: 145px;
   height: 100%;
@@ -123,7 +131,14 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Navbar({ minHeight, height, logo, menu }) {
+interface NavbarProps {
+  minHeight?: string
+  height?: string
+  logo?: string
+  menu: any
+}
+
+function Navbar({ minHeight, height, logo, menu }: NavbarProps) {
   const classes = useStyles()
   const [isTop, setIsTop] = React.useState(true)
   const [drawerOpen, setDrawerOpen] = React.useState(false)
@@ -149,12 +164,8 @@ function Navbar({ minHeight, height, logo, menu }) {
 
   return (
     <div>
-      <AtlasAppBarBase
-        height={appBarHeight}
-        minHeight={appBarMinHeight}
-        top={isTop}
-      >
-        <AtlasAppBarItemContainer top={isTop}>
+      <AtlasAppBarBase minHeight={appBarMinHeight as string} top={isTop}>
+        <AtlasAppBarItemContainer>
           <AtlasAppBarLogo
             onClick={returnHome}
             top={isTop}
@@ -180,7 +191,7 @@ function Navbar({ minHeight, height, logo, menu }) {
           <Hidden only={["xs", "sm"]}>
             <AtlasAppBarItemList top={isTop}>
               {menu ? (
-                menu.map((menuItem, index) => {
+                menu.map((menuItem: any, index: number) => {
                   return (
                     <li
                       key={index}
@@ -190,19 +201,19 @@ function Navbar({ minHeight, height, logo, menu }) {
                           menuItem.menuName
                         )
                       }}
-                      onMouseEnter={() => {
-                        global.window.document.querySelector(
-                          `#effect${index}`
+                      onMouseEnter={e => {
+                        global.window.document.getElementById(
+                          `effect${index}`
                         ).style.width = "100%"
                       }}
                       onMouseLeave={() => {
-                        global.window.document.querySelector(
-                          `#effect${index}`
+                        global.window.document.getElementById(
+                          `effect${index}`
                         ).style.width = "50%"
                       }}
                     >
                       <div>{menuItem.menuName}</div>
-                      <ListItemUnderEffect top={isTop} id={"effect" + index} />
+                      <ListItemUnderEffect id={"effect" + index} />
                     </li>
                   )
                 })
@@ -213,11 +224,7 @@ function Navbar({ minHeight, height, logo, menu }) {
           </Hidden>
         </AtlasAppBarItemContainer>
       </AtlasAppBarBase>
-      <AtlasAppBarHeightFix
-        height={appBarHeight}
-        minHeight={appBarMinHeight}
-        top={isTop}
-      />
+      <AtlasAppBarHeightFix minHeight={appBarMinHeight as string} top={isTop} />
       <AppDrawer
         menu={menu}
         isHome={isHome}

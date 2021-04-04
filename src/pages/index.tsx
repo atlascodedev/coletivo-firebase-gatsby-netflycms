@@ -67,7 +67,7 @@ const IndexPage: React.FC<any> = props => {
   }, [])
 
   return (
-    <AppLayout menu={menu}>
+    <AppLayout  menu={menu}>
       <div id="home" ref={landingRef}>
         <LandingHero ctaRef={contactRef} />
       </div>

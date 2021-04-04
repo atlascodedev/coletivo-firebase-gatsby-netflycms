@@ -70,5 +70,17 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Instituto Pro Cidadania`,
+        short_name: `IPC`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/coletivo-icon.png`,
+      },
+    },
   ],
 }

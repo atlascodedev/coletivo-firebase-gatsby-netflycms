@@ -128,7 +128,7 @@ function Post(props) {
   ]
 
   return (
-    <AppLayout menu={menu}>
+    <AppLayout pageTitle={props.pageContext.title} menu={menu}>
       <div>
         <PostBackgroundImage image={props.pageContext.featuredImage}>
           <PostBackgroundImageInnerContainer>
