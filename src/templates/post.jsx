@@ -14,6 +14,11 @@ const PostContentContainer = styled.div`
   overflow: hidden;
   max-width: 1368px;
 
+  & .markdownContent iframe {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
   & .markdownContent p > img {
     max-width: 100% !important;
   }
@@ -22,6 +27,10 @@ const PostContentContainer = styled.div`
     width: 100%;
     height: auto;
     display: block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (min-width: 1024px) {

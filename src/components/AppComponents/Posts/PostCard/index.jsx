@@ -9,7 +9,7 @@ const PostCardContainer = styled.div`
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   width: 212px;
-  height: 310px;
+  height: auto;
   padding: 1em;
   padding-top: 0.5em;
   display: flex;
@@ -20,7 +20,7 @@ const PostCardContainer = styled.div`
 
   @media (min-width: 1024px) {
     width: 278.99px;
-    height: 378.16px;
+    height: auto;
     margin-top: 0px;
     margin-bottom: 18px;
   }
