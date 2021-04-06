@@ -91,8 +91,6 @@ const PostCallToActionContainer = styled.div`
 `
 
 const PostCard = ({ image, title, date, excerpt, link }) => {
-  console.log(image, "this is the img path")
-
   return (
     <div>
       <PostCardContainer>
@@ -108,7 +106,11 @@ const PostCard = ({ image, title, date, excerpt, link }) => {
           <PostCardTitle>
             {title ? title : "Placeholder title goes here "}
           </PostCardTitle>
-          <PostCardDate>{date ? date : "03 de dezembro de 2021"}</PostCardDate>
+          <PostCardDate>
+            {date
+              ? new Date(date).toLocaleDateString("pt-br")
+              : "03 de dezembro de 2021"}
+          </PostCardDate>
 
           <PostCardExcerpt>
             {excerpt ? excerpt : "Lorem ipsum dolor sit amet, consectet..."}

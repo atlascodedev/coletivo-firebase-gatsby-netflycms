@@ -72,6 +72,7 @@ function PostSlider({ postData }) {
                 excerpt={post.post.description}
                 image={post.post.featuredimage}
                 title={post.post.title}
+                date={post.post.date}
               />
             </SwiperSlide>
           ))}
