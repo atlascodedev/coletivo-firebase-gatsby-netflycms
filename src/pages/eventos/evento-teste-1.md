@@ -8,5 +8,32 @@ description: O evento realizado pela Prefeitura Municipal com apoio do SESC/RS,
   artistas locais e regionais, muita literatura, música e teatro.
 featuredimage: /img/card-jaquirana.jpg
 ---
+**Feira em formato online**
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quas nobis vitae reiciendis ut modi quaerat animi placeat illum? Ad mollitia illum nam quia magnam! Suscipit culpa officia, unde quasi libero rem veniam voluptatibus, itaque quibusdam impedit illum. Recusandae voluptate sunt odit dicta sapiente fugit culpa, enim veritatis necessitatibus sed consequatur expedita laborum facere repellendus aliquid adipisci? Soluta velit repellat eius laborum aut provident ullam, dolorem numquam tenetur similique ipsa. Numquam aliquam inventore, pariatur, aspernatur, quibusdam aliquid repellat saepe quisquam dicta perspiciatis fuga cupiditate. Ipsum ullam porro, repellendus laudantium amet cupiditate, enim saepe nesciunt deleniti dolorum quos sint illo nihil consectetur laborum vero! Nemo maiores ea, beatae sunt impedit tempora magnam. Beatae veniam, voluptatem praesentium eos dolorum velit perferendis quibusdam, itaque ratione odio nostrum officiis dicta corrupti maiores, facere nobis voluptates suscipit molestiae assumenda tenetur. Eius laudantium perferendis, error non ea harum assumenda, itaque dolorem dolores libero, earum quae quis aliquam ducimus! Ratione, delectus illum. Voluptates maiores at cum illum quaerat fugiat ipsam amet nisi! Saepe delectus illum culpa, beatae dignissimos non! Laudantium adipisci sunt, eaque perferendis, reprehenderit sit quae, quas corporis vitae debitis numquam earum rerum maxime unde illo modi nam a totam eveniet! Quos deserunt aliquam fugiat labore ipsam neque quo rerum debitis animi quisquam maiores possimus, similique distinctio quae? Facere, consequuntur nesciunt, explicabo possimus rem sint atque voluptatem veritatis ipsam quisquam dolores, reprehenderit tempore perspiciatis deserunt distinctio iure suscipit odit nihil maiores quibusdam assumenda eaque enim. Sed ducimus, aspernatur odit voluptates et consequuntur in iste error unde fuga nesciunt qui. Similique impedit repudiandae commodi obcaecati itaque voluptatem consequuntur rerum? Deserunt natus, laboriosam explicabo assumenda pariatur eum, nostrum corrupti dolores nobis blanditiis illo iste repellat adipisci molestiae architecto, autem ad consectetur placeat rem quasi unde ea! Aliquam tenetur, sit laudantium esse, maiores adipisci ipsa autem, nulla nostrum quisquam corrupti. Tempore quae, optio quibusdam eaque iste doloremque, molestiae nemo sapiente ex at placeat, fugiat voluptate quis? Nisi, rerum. Quae, temporibus voluptatem! Quidem dignissimos aperiam omnis necessitatibus architecto eos quisquam praesentium totam pariatur id accusamus dicta, sit repudiandae sunt similique tempora reiciendis expedita dolorum officia quia culpa illo suscipit. Rem, odit soluta, modi harum dolorem autem nulla ipsum maiores velit dolorum sed alias quia reprehenderit iusto delectus expedita quis. Voluptatem sint eveniet voluptatum assumenda qui iste temporibus esse id quisquam quasi? Amet, nesciunt adipisci voluptatum reprehenderit ipsa, consequatur voluptate necessitatibus eaque molestiae sunt veritatis, sed saepe explicabo eum numquam doloremque inventore sit possimus ad assumenda fuga eligendi quam! Voluptates quia nihil dolorem officia! Voluptate nulla praesentium eveniet cupiditate ab consequatur adipisci nobis illum, nemo blanditiis non omnis voluptatibus fugiat delectus, perferendis, soluta libero sed nam voluptatum illo ipsum necessitatibus eius. Delectus tempore, omnis illo aliquam voluptas nam asperiores blanditiis iure saepe quod, et corporis nihil dignissimos dolorem magni tenetur cum ipsa provident! Dolores accusamus praesentium vel? Sunt illum autem fugit in assumenda quae, quos quas optio reprehenderit, quisquam blanditiis ullam odit cupiditate. Molestias vero omnis deserunt laudantium optio? Magnam dolor similique architecto distinctio inventore quo ab veritatis libero optio alias!
+O município de Jaquirana terá neste ano de 2020 sua 11ª Feira do Livro no formato on-line. O evento tem realização da Prefeitura Municipal, com apoio do Sesc/RS, Coletivo Pró-Cidadania e patrocínio do Banrisul. A programação contará com artistas locais e regionais em três dias de muita literatura, música, teatro, atividades lúdicas e, claro, aprendizado. O evento está marcado para os dias 06, 07, e 08 de dezembro, das 14h às 20h.
+
+Mais do que incentivar a leitura em um momento como a pandemia, em que ainda precisamos atender ao isolamento social, a Feira do Livro de Jaquirana fomenta a produção e a distribuição literária, promovendo seus escritores, poetas e demais artistas da cidade e da região. Segundo a integrante do Coletivo Pró-Cidadania, Vanessa Sanches, o evento é uma oportunidade de trazer esperança para a comunidade que há tantos anos é contemplada com essa iniciativa. “A Feira é realizada tradicionalmente em maio. Por conta deste ano atípico, muita coisa mudou. Conseguir realizar este evento literário durante a semana de aniversário do município é um grande presente para todos nós”, ressalta Vanessa.
+
+Além disso, a Feira do Livro de Jaquirana segue os quatro eixos do Plano Nacional do Livro e da Leitura: democratização do acesso; fomento à leitura e à formação de mediadores; valorização institucional da leitura e incremento de seu valor simbólico; e desenvolvimento da economia do livro.
+
+**Sobre Jaquirana:**
+Localizada no alto da Serra Gaúcha, atualmente Jaquirana conta com aproximadamente 5.000 mil habitantes. A população local é composta por descendentes de italianos e alemães, que migraram para a cidade em 1916 em busca de madeira e, até os dias de hoje, a extração vegetal é o principal recurso que movimenta a economia do município.
+
+Confira abaixo a programação completa do evento:
+Dia 06/12:
+
+14h Contação de História
+16h Apresentação da invernada do CTG O Fogão Gaúcho
+18h Abertura oficial e apresentação musical com artista local
+Dia 07/12
+
+14h Contação de história
+16h Bate-papo com o rapper e educador social Chiquinho Divilas (adolescentes)
+18h Música com artista local
+19h Live com o grupo teatro-musical Danadões
+Dia 08/12
+
+14h Contação de História
+16h Espetáculo "Pum-histórias mal cheirosas" da Cia Makki
+18h Live e lançamento do livro Raízes e bate-papo com os escritores e pesquisadores
+19h Live com Iotti – cartunista da página Jaquirana Air
