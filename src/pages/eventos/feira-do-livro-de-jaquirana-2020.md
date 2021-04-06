@@ -3,9 +3,10 @@ contentType: events
 templateKey: post
 title: Feira do Livro de Jaquirana - 2020
 date: 2020-12-01T09:30:00.000Z
-description: O evento é realizado pela Prefeitura Municipal, com apoio do
-  Sesc/RS, Coletivo Pró-Cidadania e patrocínio do Banrisul. A programação terá
-  artistas locais e regionais, literatura, música e teatro.
+description: O evento foi realizado pela Prefeitura Municipal de Jaquirana, com
+  o apoio do Sesc/RS, do Instituto Gaúcho Pró-Cidadania e com o patrocínio
+  exclusivo do Banrisul. A programação teve artistas locais e regionais,
+  literatura, música e teatro.
 featuredimage: /img/card-jaquirana.jpg
 ---
 <!--StartFragment-->
