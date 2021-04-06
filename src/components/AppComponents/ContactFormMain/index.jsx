@@ -203,7 +203,7 @@ function CourseContactForm(props) {
 
             axios
               .post(
-                "https://us-central1-coletivoprocidadania-a52de.cloudfunctions.net/api/sendMail",
+                "https://us-central1-atlascodedev-landing.cloudfunctions.net/api/coletivoprocidadania",
                 {
                   name: values.name,
                   email: values.email,
