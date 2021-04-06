@@ -5,8 +5,8 @@ title: Nova Lei de Licitações 2021
 date: 2021-04-06T09:47:14.375Z
 description: As licitações são um nicho econômico, chamado de Mercado
   Governamental que mostra a importância do Estado na economia.As licitações
-  Públicas em geral tem o gasto em média de R$ 600.000.000.000,00 anual. Conheça
-  as novas regras.
+  Públicas em geral tem o gasto em média de R$ 600 bi anual. Conheça as novas
+  regras.
 featuredimage: /img/licitacoes.jpg
 ---
 <!--StartFragment-->
