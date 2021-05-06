@@ -3,36 +3,24 @@ contentType: articles
 templateKey: post
 title: "“Festa de negros” de Taquara: patrimônio imaterial a ser reconhecido"
 date: 2021-05-06T00:07:53.543Z
-description: >-
-  Este artigo apresenta resultados de uma pesquisa qualitativa que teve a
-  finalidade discutir o patrimônio imaterial como construtor de memória e
+description: Este artigo apresenta resultados de uma pesquisa qualitativa que
+  teve a finalidade discutir o patrimônio imaterial como construtor de memória e
   identidade como resultado de analise de documentos referente a pesquisa sobre
   os clubes sócias de negros e o carnaval no município de Taquara, Rio Grande do
-  Sul. O objetivo a partir desta pesquisa é comunicar e reconhecer a existência
-  destes espaços no município e de como os mesmos construíram ações socais e
-  políticas vivenciadas até os dias atuais , bem como apontar a necessidade
-  implantação de políticas públicas afirmativas de preservação da memória e da
-  identidade dos clubes de negros a partir do reconhecimento como patrimônio
-  imaterial local. Interessa também afirmar o carnaval de rua como espaço
-  democrático e de cidadania, tendo assim a necessidade do poder público de
-  investir em sua manutenção e ampliação.
-
-
-  Diogo da Silva Corrêa
-
-  Faccat
-
-
-  Mônica Juliana Facio
-
-  Faccat
-
-
-  Daniel Luciano Gevehr
-
-  Faccat
+  Sul.
 featuredimage: /img/bloco-palmira.jpg
 ---
+Este artigo apresenta resultados de uma pesquisa qualitativa que teve a finalidade discutir o patrimônio imaterial como construtor de memória e identidade como resultado de analise de documentos referente a pesquisa sobre os clubes sócias de negros e o carnaval no município de Taquara, Rio Grande do Sul. O objetivo a partir desta pesquisa é comunicar e reconhecer a existência destes espaços no município e de como os mesmos construíram ações socais e políticas vivenciadas até os dias atuais , bem como apontar a necessidade implantação de políticas públicas afirmativas de preservação da memória e da identidade dos clubes de negros a partir do reconhecimento como patrimônio imaterial local. Interessa também afirmar o carnaval de rua como espaço democrático e de cidadania, tendo assim a necessidade do poder público de investir em sua manutenção e ampliação.
+
+Diogo da Silva Corrêa
+Faccat
+
+Mônica Juliana Facio
+Faccat
+
+Daniel Luciano Gevehr
+Faccat
+
 ## INTRODUÇÃO
 
 Várias histórias e memórias surgem quando falamos em festa, em momento de lazer e descontração, sendo essas memórias em sua grande maioria de prazer e diversão. Esses momentos se tornam fonte de amizades, de amores e de construções subjetivas diversas. Essas construções são denominadas pela ciência de bens imateriais que vêm ganhando a cada dia mais espaço de discussão. Tratam de temas complexos, como o reconhecimento das culturas e identidades de minorias étnicas e econômicas, que foram desenhando seu espaço social e cultural pela resistência, persistência e luta política. Pensando a respeito destas lutas e resistências através da arte e das manifestações culturais, este artigo aborda o processo de constituição dos espaços de festas: os salões dos ‘pretos’ e dos ‘brancos’ na cidade de Taquara, Rio Grande do Sul, nas décadas de 50, 60, 70 e o processo de abertura destes espaços através do carnaval.
@@ -58,8 +46,6 @@ A partir do Tratado de Santo Ildefonso instaura-se um período de paz o que poss
 A colônia foi dividida em lotes e abrigava 120 famílias, que exerciam atividades econômicas como: agricultores, tanoeiros, oleiros, ferreiros, marceneiros, construtores, extração de pedras, farinha de mandioca, biju, polvilho, milho e trigo, carnes, ovos e leite. No que se refere as indústrias eram presentes: atafonas de farinha de mandioca, engenhos de farinha, azeite, cana, grão, serrar madeira, serraria, curtumes, ferrarias e fábrica de arreios.
 
 Segundo Muller e Sobrinho (2008) a instalação da via-férrea em 1903, trecho Novo Hamburgo/ Taquara/Canela foi um dos grandes agentes de desenvolvimento social e cultural, crescimento populacional e influência na política que elevaram o status de Taquara como o centro cultural e comércio regional, se tornando sede, por decreto, das localidades que da- riam origem às cidades de Canela, Gramado, Três Coroas, Igrejinha e Parobé. Assim sendo local de idas e vindas e de grande trânsito de muitas pessoas oriundas de diversos lugares. Essa caracterização do território se faz pertinente para entender o que possibilitou a esse território ter dois salões de bailes somente para negros, e qual seria o impacto deste espaço na construção cultural deste município.
-
-
 
 PATRIMÔNIO IMATERIAL E IDENTIDADE
 
@@ -127,8 +113,6 @@ O carnaval em Taquara se mostra um movimento que resiste e aponta um caminho a s
 
 Portanto, é necessário a criação de políticas públicas locais que reconheçam como patrimônio imaterial o carnaval, clubes sociais de negros e as festas de samba, criando ações de resgate e preservação patrimonial desta parcela da população que continua a lutar por sua herança e protagonismo.
 
-
-
 PATRIMÔNIO E RECONHECIMENTO: O VALOR DAS POLÍTICAS PÚBLICAS
 
 Nos últimos anos as políticas de patrimônio imaterial tornaram-se algo urgente e
@@ -170,8 +154,6 @@ Do que foi pesquisado, é possível concluir que a trajetória histórica dos cl
 Vê-se assim que, no cenário atual urge a experiência de volta ao que fez sentido, ao que construiu cenários, ao que possibilitou reconhecimento, ao que fez história. Urge o relato e a fala sobre esse período, seja nas escolas, nas praças ou na academia, pois o desaparecimento destes espaços não constrói a autenticidade e o protagonismo que a população negra taquarense merece. Urge o debate persistente sobre o tema da cultura negra neste cenário, contrariando prognósticos sombrios sobre seu desaparecimento, pois o Carnaval é vida e é resistência.
 
 Por fim, é importante afirmar que o carnaval, desde os tempos das festas em clubes, dos salões de brancos e de negros, até os dias atuais, onde a festa acontece na rua, tem servido para construir identidades políticas e afirmar direitos, pelo fato de que homens e mulheres podem reconhecer e vivenciar sua herança, a luta dos seus pares por dignidade e celebrar seus antepassados. Logo, a partir daqui a missão deste estudo é o de comunicar a respeito desta manifestação local, possibilitando assim pensar em políticas públicas afirmativas que possibilitem o reconhecimento e o empoderamento desta importante história de alteridade.
-
-
 
 REFERÊNCIAS
 
