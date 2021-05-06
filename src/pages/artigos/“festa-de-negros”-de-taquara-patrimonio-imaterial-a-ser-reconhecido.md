@@ -5,9 +5,7 @@ title: "“Festa de negros” de Taquara: patrimônio imaterial a ser reconhecid
 date: 2021-05-06T00:07:53.543Z
 description: Este artigo apresenta resultados de uma pesquisa qualitativa que
   teve a finalidade discutir o patrimônio imaterial como construtor de memória e
-  identidade como resultado de analise de documentos referente a pesquisa sobre
-  os clubes sócias de negros e o carnaval no município de Taquara, Rio Grande do
-  Sul.
+  identidade.
 featuredimage: /img/bloco-palmira.jpg
 ---
 Este artigo apresenta resultados de uma pesquisa qualitativa que teve a finalidade discutir o patrimônio imaterial como construtor de memória e identidade como resultado de analise de documentos referente a pesquisa sobre os clubes sócias de negros e o carnaval no município de Taquara, Rio Grande do Sul. O objetivo a partir desta pesquisa é comunicar e reconhecer a existência destes espaços no município e de como os mesmos construíram ações socais e políticas vivenciadas até os dias atuais , bem como apontar a necessidade implantação de políticas públicas afirmativas de preservação da memória e da identidade dos clubes de negros a partir do reconhecimento como patrimônio imaterial local. Interessa também afirmar o carnaval de rua como espaço democrático e de cidadania, tendo assim a necessidade do poder público de investir em sua manutenção e ampliação.
