@@ -51,19 +51,11 @@ O município abriga, em seu território, atividades que surgiram a partir dos em
 
 Segundo, Fernandes (2008) a colonização de Taquara começou no início século XVIII até o século XIX, muito antes da chegada dos imigrantes alemães, sendo que sua ocupação estava condicionada à política do governo central. O território correspondia aos espanhóis (Tratado de Tordesilhas), mesmo se tratando de um governo português no restante do território do Império.
 
-
-
 “O desejo português de fazer parte dos lucros com as minas de Potosí através do comércio, gerou guerras e disputas\[...] Essa movimentação de tropas, de exércitos dos dois lados, foi responsável pela movimentação de pessoas para a ocupação do Vale dos Sinos e Paranhana. Havia por essas terras tanto pessoas de origem lusa, como indígenas e espanhóis.” (Fernan- des, 2008, p. 26)
-
-
 
 A partir do Tratado de Santo Ildefonso instaura-se um período de paz o que possibilita as atividades agropecuárias e madeireiras. A colonização alemã iniciou em 1846 com a chegada de Tristão Joze Monteiro e a compra da fazenda do Mundo Novo. “Em 1845, a 2 de junho, Tristão Joze Monteiro e Jorge Eggers compraram da viúva Libania Corrêa de Leans a Fazenda do Mundo Novo. \[...] Em 1846 funda a Colônia do Mundo Novo, localizada no lugarejo Pinhal.” (Fernandes, 2008, p.29)
 
-
-
 A colônia foi dividida em lotes e abrigava 120 famílias, que exerciam atividades econômicas como: agricultores, tanoeiros, oleiros, ferreiros, marceneiros, construtores, extração de pedras, farinha de mandioca, biju, polvilho, milho e trigo, carnes, ovos e leite. No que se refere as indústrias eram presentes: atafonas de farinha de mandioca, engenhos de farinha, azeite, cana, grão, serrar madeira, serraria, curtumes, ferrarias e fábrica de arreios.
-
-
 
 Segundo Muller e Sobrinho (2008) a instalação da via-férrea em 1903, trecho Novo Hamburgo/ Taquara/Canela foi um dos grandes agentes de desenvolvimento social e cultural, crescimento populacional e influência na política que elevaram o status de Taquara como o centro cultural e comércio regional, se tornando sede, por decreto, das localidades que da- riam origem às cidades de Canela, Gramado, Três Coroas, Igrejinha e Parobé. Assim sendo local de idas e vindas e de grande trânsito de muitas pessoas oriundas de diversos lugares. Essa caracterização do território se faz pertinente para entender o que possibilitou a esse território ter dois salões de bailes somente para negros, e qual seria o impacto deste espaço na construção cultural deste município.
 
@@ -71,45 +63,25 @@ Segundo Muller e Sobrinho (2008) a instalação da via-férrea em 1903, trecho N
 
 PATRIMÔNIO IMATERIAL E IDENTIDADE
 
-
-
 A cultura imaterial, a memória, é entendida pela literatura como tudo aquilo que não pode ser tocada, mas que pode ser sentida e assim sendo recebem valor por parte de uma sociedade. Assim sendo eventos culturais ganham dimensões de patrimônio da mesma forma que as obras de artes, os edifícios e os objetos (SANTOS, 2003).
-
-
 
 A noção de patrimônio cultural imaterial visa dar uma resposta aos anseios de reconhecimento de um amplo e multifacetado conjunto de processos culturais. É a criação de espaço na política pública para agentes, suas criações, seus públicos, seus problemas e necessidades peculiares. Trata, portanto, de incorporar a diversidade cultural de um território e jogar luz sobre o relevante tema da inclusão cultural e dos efeitos sociais dessa inclusão (CASTRO; FONSECA, 2008). Para Borges (2005) o interesse pelo reconhecimento dos bens imateriais é difuso, ainda que o valor cultural faça sentido mais para uma comunidade inserida numa coletividade mais ampla, ou seja, esses bens são considerados representativos da “memória coletiva”, oportunizando o reconhecimento de diversas identidades num mesmo território.
 
-
-
 Reis & Figueiredo (2015) compreendem o patrimônio imaterial a partir de uma complexidade que ultrapassa sobremaneira o conceito pensado e exposto na Constituição Federal de 19881. Tal constatação é justificável pela lista não taxativa de aspectos que podem influenciar e formar patrimônio, como percepções de herança, tradição, diversidade, etnia, referencial, pertencimento, construção social, que são tão importantes quanto a identidade e memória (GEVEHR; DILLY, 2017).
-
-
 
 Nesse contexto, é preciso destacar que o conceito de identidade como processo de transformação contínua de indivíduos nos aspectos culturais, sociais, políticos etc., foi se amoldando ao longo da história e teve a descentralização do foco de análise como seu principal elemento. Antes, a identidade iluminista se pautava pela centralidade no indivíduo que era dotado de sua própria essência que o acompanharia ao longo de sua trajetória de vida, racionalmente imutável. Segundo Hall (2006), essa concepção passa a incorporar aspectos sociológicos que eram administrados internamente em cada indivíduo numa relação entre o externo e o interno, que ainda era mantinha um núcleo de essência inalterável.
 
-
-
 É na concepção pós-moderna que identidade toma contornos de transitoriedade, onde as memórias e as dinâmicas culturais não deixam espaço para que se compreenda o homem com um “eu real” inabalável e único. O todo é uma constante construção. A partir desses desdobramentos, a identidade passa a ser um tema delicado e muito influenciável. O sen- timento de pertencimento, nesse caso, vincula os indivíduos aos discursos arraigados, principalmente, à cultura nacional, produzindo sentidos não biológicos, mas históricos que identificam o sujeito (HALL, 2006).
-
-
 
 Os discursos, portanto, são os fios condutores das memórias que serão mais ou menos elaborados, exaltados e registrados, movimentando sentimentos formadores de “identidades”, dependendo do interesse de seu emissor. Nesse sentido, o “processo da memória no homem faz intervir não só a ordenação de vestígios, mas também a releitura desse vestígio” (LE GOFF, 1984, p. 12).
 
 Apesar de todas as interrelações e metamorfoses a que se expõem a identidade a partir dos processos de globalização, as origens nacionais pesam bastante na sua dinâmica de representações e no fluxo constante de discursos. Uma nova representação (ou releitura de um discurso) é “convocada” para compor o espaço vazio deixado por outro discurso. Essas articulações acabam definindo uma hierarquização do que é ou não identidade merecedora de patrimonialização, muitas vezes deliberadamente motivadas por interesses de quem detém poder (HALL, 2011).
 
-
-
 O reconhecimento do que é ou não patrimônio, do que precisa ser lembrado e o que deve ser esquecido é um processo complexo. Conforme Ferreira (2006), as essas escolhas têm sempre um caráter eletivo: definem o que vai representar um grupo, uma sociedade, ou a própria humanidade no seu sentido mais amplo. Nas palavras de Hartog (2014, p.193), funciona como uma forma de expressão do álter ego, ou seja, uma maneira de a sociedade expressar. Vasconcelos (2018) lembra que essa eleição depende do contexto de formação social dos grupos que estão no poder, de tal forma que a valoração dos objetos produzido no passado explicam como os povos e sua elite se relacionavam com o passado distante e o presente. É, de fato, um processo conflituoso e como tal é abordado por Chagas (2005):
-
-
 
 Reconhecer a inseparabilidade entre memória e poder, entre preservação e poder, implica a aceitação de que esse é um terreno de litígio e implica também a consciência de que o poder não é apenas repressor e castrador, é também semeador e promotor de memórias e esquecimentos, de preservações e des- truições. (Chagas, 2005, p. 3)
 
-
-
 Os trabalhos de Silva (2017) e Peres de Lima (2016) revelam exemplos de como algumas expressões populares, notadamente as vinculadas às heranças africanas, tiveram a trajetória histórica marcadas pela repressão e proibição, passando pela tolerância e aceitação para, finalmente, ser reconhecida e incorporada à cultura de um território.
-
-
 
 Ambos descrevem a verdadeira luta pelo reconhecimento e respeito à cultura de comunidades negras que só recentemente conseguiram o status de patrimônio cultural em suas realidades. Os cenários são parecidos: no primeiro caso, os negros e negras que se expressavam através do jongo, cultura difundida especialmente no Rio de Janeiro desde a época da escravatura, eram taxados de “incivilizados” e “bárbaros” e faziam a “dança de negros”. Já na cidade de Jaguarão, no Rio Grande do sul, o Clube social negro 24 de outubro era um dos locais, segundo “famílias brancas” e de classe média da cidade, a serem deliberadamente evitados por ser um “clube mal frequentado”. Esses exemplos demonstram o preconceito arraigado na memória social e a necessidade de reivindicação constante de espaços, mesmo após o reconhecimento através da patrimonialização.
 
