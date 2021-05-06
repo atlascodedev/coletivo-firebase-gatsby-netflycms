@@ -42,3 +42,11 @@ Este estudo se caracteriza como uma pesquisa qualitativa, de caráter explorató
 O presente artigo está dividido em cinco seções, organizadas da seguinte forma: a seção dois apresenta a caracterização do município de Taquara/RS, a seção três aborda as temáticas do patrimônio imaterial e identidade, a seção quatro trata das festas como memória viva descrevendo o cenário histórico do carnaval do município, e na seção 5 serão expostas as conclusões do estudo.
 
 ## CARACTERIZAÇÃO DO MUNICÍPIO
+
+Taquara é um município do Vale do Paranhana, Região Metropolitana de Porto Alegre, no estado do Rio Grande do Sul, Brasil. Município de colonização predominantemente ale- mã localizada na Encosta Inferior do Nordeste, região do COREDE Paranhana/Encosta da Serra. Segundo estimativa do IBGE (2010), Taquara possui em torno de 54.656 habitantes, sendo que a maioria reside na área urbana e apenas 9.380 destes moram na zona rural, sendo 34.423 brancos e 6.530 pretos/pardos.
+
+Encontra-se a menos de 100 km da capital Porto Alegre, das cidades de Gramado, Canela e do Litoral Norte. Tem seus limites ao Norte com os municípios de Igrejinha, Três Coroas e São Francisco de Paula; ao Sul, com Glorinha e Gravataí; ao Leste, com Rolante e Santo Antônio da Patrulha; e no Oeste, com Parobé, Sapiranga e Novo Hamburgo.
+
+O município abriga, em seu território, atividades que surgiram a partir dos empreendimentos familiares dos imigrantes, em grande parte de origem germânica, ligados em sua maio- ria aos setores agrícola, industrial e comercial, em grande parte com mão de obra escrava.
+
+Segundo, Fernandes (2008) a colonização de Taquara começou no início século XVIII até o século XIX, muito antes da chegada dos imigrantes alemães, sendo que sua ocupação estava condicionada à política do governo central. O território correspondia aos espanhóis (Tratado de Tordesilhas), mesmo se tratando de um governo português no restante do território do Império.
