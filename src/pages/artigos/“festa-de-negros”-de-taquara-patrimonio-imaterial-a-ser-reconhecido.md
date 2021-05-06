@@ -16,6 +16,10 @@ Mônica Juliana Facio - Faccat
 
 Daniel Luciano Gevehr - Faccat
 
+Editora Científica Digital - Temas da Diversidade: Experiências e Práticas de Pesquisa Volume 2
+
+ <https://www.editoracientifica.org/books/isbn/978-65-89826-05-7>
+
 ## INTRODUÇÃO
 
 Várias histórias e memórias surgem quando falamos em festa, em momento de lazer e descontração, sendo essas memórias em sua grande maioria de prazer e diversão. Esses momentos se tornam fonte de amizades, de amores e de construções subjetivas diversas. Essas construções são denominadas pela ciência de bens imateriais que vêm ganhando a cada dia mais espaço de discussão. Tratam de temas complexos, como o reconhecimento das culturas e identidades de minorias étnicas e econômicas, que foram desenhando seu espaço social e cultural pela resistência, persistência e luta política. Pensando a respeito destas lutas e resistências através da arte e das manifestações culturais, este artigo aborda o processo de constituição dos espaços de festas: os salões dos ‘pretos’ e dos ‘brancos’ na cidade de Taquara, Rio Grande do Sul, nas décadas de 50, 60, 70 e o processo de abertura destes espaços através do carnaval.
