@@ -10,14 +10,11 @@ featuredimage: /img/bloco-palmira.jpg
 ---
 Este artigo apresenta resultados de uma pesquisa qualitativa que teve a finalidade discutir o patrimônio imaterial como construtor de memória e identidade como resultado de analise de documentos referente a pesquisa sobre os clubes sócias de negros e o carnaval no município de Taquara, Rio Grande do Sul. O objetivo a partir desta pesquisa é comunicar e reconhecer a existência destes espaços no município e de como os mesmos construíram ações socais e políticas vivenciadas até os dias atuais , bem como apontar a necessidade implantação de políticas públicas afirmativas de preservação da memória e da identidade dos clubes de negros a partir do reconhecimento como patrimônio imaterial local. Interessa também afirmar o carnaval de rua como espaço democrático e de cidadania, tendo assim a necessidade do poder público de investir em sua manutenção e ampliação.
 
-Diogo da Silva Corrêa
-Faccat
+Diogo da Silva Corrêa - Faccat
 
-Mônica Juliana Facio
-Faccat
+Mônica Juliana Facio - Faccat
 
-Daniel Luciano Gevehr
-Faccat
+Daniel Luciano Gevehr - Faccat
 
 ## INTRODUÇÃO
 
@@ -45,7 +42,7 @@ A colônia foi dividida em lotes e abrigava 120 famílias, que exerciam atividad
 
 Segundo Muller e Sobrinho (2008) a instalação da via-férrea em 1903, trecho Novo Hamburgo/ Taquara/Canela foi um dos grandes agentes de desenvolvimento social e cultural, crescimento populacional e influência na política que elevaram o status de Taquara como o centro cultural e comércio regional, se tornando sede, por decreto, das localidades que da- riam origem às cidades de Canela, Gramado, Três Coroas, Igrejinha e Parobé. Assim sendo local de idas e vindas e de grande trânsito de muitas pessoas oriundas de diversos lugares. Essa caracterização do território se faz pertinente para entender o que possibilitou a esse território ter dois salões de bailes somente para negros, e qual seria o impacto deste espaço na construção cultural deste município.
 
-PATRIMÔNIO IMATERIAL E IDENTIDADE
+## PATRIMÔNIO IMATERIAL E IDENTIDADE
 
 A cultura imaterial, a memória, é entendida pela literatura como tudo aquilo que não pode ser tocada, mas que pode ser sentida e assim sendo recebem valor por parte de uma sociedade. Assim sendo eventos culturais ganham dimensões de patrimônio da mesma forma que as obras de artes, os edifícios e os objetos (SANTOS, 2003).
 
@@ -77,7 +74,7 @@ Reconhecer como patrimônio imaterial manifestações cultuais reprimidas e que 
 
 Na seção que segue, são discutidas as manifestações culturais intangíveis oriundas da cultura negra e a importância delas na dinâmica local e regional.
 
-AS FESTAS COMO MEMÓRIA VIVA- DIMENSÕES IMATERIAIS
+## AS FESTAS COMO MEMÓRIA VIVA- DIMENSÕES IMATERIAIS
 
 Ao discutir os significados da preservação da memória de um determinado grupo social, neste caso os negros, é necessário sempre se questionar quem elege o que se deve ou não preservar, deve-se ou não constituir memória, deve-se ou não se tornar cultura. Por que e o que se torna patrimônio? “\[…] toda seleção e justificativa não são aleatórias e estão ligadas a interesses de grupos que estão no poder.” (Tanno, 2018)
 
@@ -111,13 +108,9 @@ O carnaval em Taquara se mostra um movimento que resiste e aponta um caminho a s
 
 Portanto, é necessário a criação de políticas públicas locais que reconheçam como patrimônio imaterial o carnaval, clubes sociais de negros e as festas de samba, criando ações de resgate e preservação patrimonial desta parcela da população que continua a lutar por sua herança e protagonismo.
 
-PATRIMÔNIO E RECONHECIMENTO: O VALOR DAS POLÍTICAS PÚBLICAS
+## PATRIMÔNIO E RECONHECIMENTO: O VALOR DAS POLÍTICAS PÚBLICAS
 
-Nos últimos anos as políticas de patrimônio imaterial tornaram-se algo urgente e
-
-emergente para o reconhecimento das alteridades silenciadas por narrativas hegemônicas
-
-e excludentes. Contudo, infelizmente as políticas patrimoniais imateriais ainda não tem o reconhecimento devido por parte dos municípios, devido aos poucos anos de sua im- plantação no Brasil.
+Nos últimos anos as políticas de patrimônio imaterial tornaram-se algo urgente e emergente para o reconhecimento das alteridades silenciadas por narrativas hegemônicas e excludentes. Contudo, infelizmente as políticas patrimoniais imateriais ainda não tem o reconhecimento devido por parte dos municípios, devido aos poucos anos de sua im- plantação no Brasil.
 
 “\[...] patrimonialização está voltada à preservação de bens materiais e imate- riais das culturas existentes no Brasil e é resultado de regulações recentes. Somente a partir de 2000, com a institucionalização da política nacional de patrimônio imaterial, começa a inserção de novas demandas e atores em busca do reconhecimento de seu repertorio cultural.” (Peres de Lima, p. 150)
 
@@ -133,7 +126,7 @@ O preconceito e o processo de segregação social que deu origem ao povoado Taqu
 
 Nesta perspectiva, a marcante presença na historicidade de Taquara, fundamenta uma mobilização coletiva a fim de que tanto o carnaval como os clubes sociais negros tenham sua parcela de construção histórica reconhecida e preservada, mas também se faz necessário alcançar, através de equipamentos oriundos de políticas públicas, a possibilidade que essa manifestação tenha possibilidade de ser (re)significada e conduzida por meio do calendário oficial do município de Taquara ao seu verdadeiro lugar, o de transformação dos códigos sociais através da arte e de reconhecimento de seu valor na construção deste espaço social.
 
-CONCLUSÃO
+## CONCLUSÃO
 
 No decorrer deste artigo foi possível constatar o quanto a representatividade importa e o quanto devemos preservá-la para validar nossa história, mas também nos lançarmos na construção de dias com equidade e justiça social.
 
@@ -153,7 +146,7 @@ Vê-se assim que, no cenário atual urge a experiência de volta ao que fez sent
 
 Por fim, é importante afirmar que o carnaval, desde os tempos das festas em clubes, dos salões de brancos e de negros, até os dias atuais, onde a festa acontece na rua, tem servido para construir identidades políticas e afirmar direitos, pelo fato de que homens e mulheres podem reconhecer e vivenciar sua herança, a luta dos seus pares por dignidade e celebrar seus antepassados. Logo, a partir daqui a missão deste estudo é o de comunicar a respeito desta manifestação local, possibilitando assim pensar em políticas públicas afirmativas que possibilitem o reconhecimento e o empoderamento desta importante história de alteridade.
 
-REFERÊNCIAS
+### REFERÊNCIAS
 
 1. BARROSO, Véra Lucia Maciel; SOBRINHO, Paulo Gilberto. Raízes de Taquara, Vol. I, II: XIX encontro dos municípios originários de Santo Antônio da Patrulha. EST, 2008
 2. Borges, M. A. (2005). O tombamento como instrumentos jurídicos para a proteção do pa- trimônio cultural. Revista Jurídica., 7(73), 1-4. Recuperado em 17 de abril de 2016, de http:// [www.presidencia.gov.br/ccivil_03/revista/](http://www.presidencia.gov.br/ccivil_03/revista/) Rev_73/artigos/MarcoAntonio_rev73.htm.
