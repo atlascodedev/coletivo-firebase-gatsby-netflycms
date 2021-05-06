@@ -94,9 +94,7 @@ Em 1908, mas especificamente em abril, funda-se a Sociedade 13 de Maio, na local
 
 Esses salões e sociedade só admitiam em sua diretoria e em suas atividades sociais negros, uma resposta a segregação realizada pelos salões e sociedades de Taquara, que só permitiam negros como mão de obra para servirem aos brancos.
 
-“Antes da década de 60, os clubes e sociedades em Taquara eram divididos
-
-entre classes sociais e etnias. Os clubes e sociedades da etnia branca não permitiam a entrada de negros, a não ser quando estes eram prestadores de serviços. Foi por volta da década de 60, após Dona Palmira e as Diretorias do Clube Comercial e Sociedade 5 de Maio conversarem, que os blocos e/ou foliões negros puderam entrar no Clube Comercial ou Sociedade 5 de Maio para darem apenas uma (01) volta no salão, confraternizando com os foliões lá presentes, e depois se retirarem.” (Origens do Carnaval de Taquara. Acesso em 01/03/2020)
+“Antes da década de 60, os clubes e sociedades em Taquara eram divididos entre classes sociais e etnias. Os clubes e sociedades da etnia branca não permitiam a entrada de negros, a não ser quando estes eram prestadores de serviços. Foi por volta da década de 60, após Dona Palmira e as Diretorias do Clube Comercial e Sociedade 5 de Maio conversarem, que os blocos e/ou foliões negros puderam entrar no Clube Comercial ou Sociedade 5 de Maio para darem apenas uma (01) volta no salão, confraternizando com os foliões lá presentes, e depois se retirarem.” (Origens do Carnaval de Taquara. Acesso em 01/03/2020)
 
 O primeiro Carnaval de rua em Taquara foi em 1969, se repetindo até 2009, porém desde 1940 eram organizados blocos de rua para brincar o carnaval, sendo o único momento que brancos e negros foliavam juntos.
 
