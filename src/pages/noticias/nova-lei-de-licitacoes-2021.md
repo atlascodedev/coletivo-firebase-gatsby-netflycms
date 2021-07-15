@@ -4,9 +4,8 @@ templateKey: post
 title: Nova Lei de Licitações 2021
 date: 2021-04-06T09:47:14.375Z
 description: As licitações são um nicho econômico, chamado de Mercado
-  Governamental que mostra a importância do Estado na economia. As licitações
-  públicas em geral movimentam em torno de R$ 600 bi anual. Conheça as novas
-  regras.
+  Governamental, que mostra a importância do Estado na economia movimentando R$
+  600 bi anual.
 featuredimage: /img/licitacoes.jpg
 ---
 <!--StartFragment-->
