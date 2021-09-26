@@ -15,6 +15,7 @@
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",
     "css.escape": "^1.5.1",
+    "deepmerge": "^4.2.2",
     "event-source-polyfill": "^1.0.25",
     "firebase": "^8.2.1",
     "formik": "^2.2.6",
