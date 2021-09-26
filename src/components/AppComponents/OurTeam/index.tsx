@@ -237,21 +237,8 @@ function OurTeam(props) {
 
   return (
     <OurTeamRootContainer>
-      <Container>
+      <Container maxWidth="lg">
         <OurTeamGridContainer>
-          {/* <OurTeamPhotosContainer>
-            <h3>Equipe</h3>
-            <OurTeamPhotosInnerContainer>
-              {teamMembersArray.map((member, index) => (
-                <TeamMemberCard
-                  key={index}
-                  img={member.teamMemberPicture}
-                  name={member.teamMemberName}
-                  position={member.teamMemberPosition}
-                />
-              ))}
-            </OurTeamPhotosInnerContainer>
-          </OurTeamPhotosContainer> */}
           <OurTeamTextContainer>
             <OurTeamStepperSvg src={stepperSvg} />
             <OurTeamTextInnerContainer>

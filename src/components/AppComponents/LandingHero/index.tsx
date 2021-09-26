@@ -1,19 +1,18 @@
 import React from "react"
 import styled from "styled-components"
-import landingBg from "../../../images/svg-hero-front.svg"
-// import heroImg from "../../../images/coletivo-hero-img.png"
-import { Button } from "@material-ui/core"
+import { Button, Typography, Box, Container } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
-import GatsbyImage from "gatsby-image"
+import GatsbyImage, { GatsbyImageProps } from "gatsby-image"
+import LandingBG from "../../../images/svg-hero-front.svg"
 
-const LandingBackgroundHero = styled.div`
+const LandingBackgroundHero = styled.div<{ image: string }>`
   position: relative;
   z-index: 1;
   background-image: ${props => `url(${props.image})`};
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  height: calc(100vh - 90px);
+  height: auto;
   width: 100%;
 
   @media (min-width: 1024px) {
@@ -44,14 +43,14 @@ const LandingHeroImageContainer = styled.div`
   }
 `
 
-const LandingHeroImage = styled(GatsbyImage)`
-  width: 85%;
-  height: 85%;
+const LandingHeroImage = styled(GatsbyImage)<GatsbyImageProps>`
+  width: 100%;
+  height: 100%;
 
   @media (min-width: 768px) {
     margin-top: 2em;
-    width: 85%;
-    height: 85%;
+    width: 100%;
+    height: 100%;
   }
 
   @media (min-width: 1024px) {
@@ -142,8 +141,6 @@ function LandingHero({ ctaRef, ...props }) {
     }
   `)
 
-  console.log(heroImgWebp)
-
   const [cta, setCta] = React.useState(null)
 
   React.useEffect(() => {
@@ -153,46 +150,58 @@ function LandingHero({ ctaRef, ...props }) {
   }, [])
 
   return (
-    <div>
-      <LandingBackgroundHero image={landingBg}>
-        <LandingHeroGridContainer>
-          <LandingHeroImageContainer>
-            <LandingHeroImage
-              imgStyle={{ objectFit: "contain" }}
-              fluid={heroImgWebp.file.childImageSharp.fluid}
-            />
-          </LandingHeroImageContainer>
+    <Box sx={{ pb: { xs: "50px" } }}>
+      <Container maxWidth="lg">
+        <LandingBackgroundHero image={LandingBG}>
+          <LandingHeroGridContainer>
+            <LandingHeroImageContainer>
+              <LandingHeroImage
+                imgStyle={{ objectFit: "contain" }}
+                fluid={heroImgWebp.file.childImageSharp.fluid}
+              />
+            </LandingHeroImageContainer>
 
-          <LandingHeroTextContainer>
-            <LandingHeroTextInnerContainer>
-              <HeroTextMainText>
-                <div>
-                  <h1>Elaboração e assessoria integral em projetos</h1>
-                </div>
+            <LandingHeroTextContainer>
+              <LandingHeroTextInnerContainer>
+                <HeroTextMainText>
+                  <div>
+                    <Box
+                      fontSize={{ xs: "30px", lg: "38px" }}
+                      fontWeight={"bold"}
+                      color="#17396B"
+                    >
+                      Instituto Gaúcho Pró-Cidadania: um agente social
+                      transformador
+                    </Box>
+                  </div>
 
-                <div className={"secondaryText"}>
-                  <p>
-                    O Instituto Gaúcho Pró-Cidadania trabalha em parceria com o
-                    poder público e a sociedade civil em ações e projetos na
-                    promoção da cidadania.
-                  </p>
-                </div>
-
-                <div className={"ctaButton"}>
-                  <Button
-                    onClick={() => cta.scrollIntoView({ behavior: "smooth" })}
-                    variant="contained"
-                    color="secondary"
+                  <Box
+                    fontSize={{ xs: "16px", lg: "20px" }}
+                    color="#5A5A5A"
+                    fontWeight={500}
+                    padding={{ xs: "35px 0px" }}
                   >
-                    Fale conosco
-                  </Button>
-                </div>
-              </HeroTextMainText>
-            </LandingHeroTextInnerContainer>
-          </LandingHeroTextContainer>
-        </LandingHeroGridContainer>
-      </LandingBackgroundHero>
-    </div>
+                    Elaboração e assessoria integral de projetos em parceria com
+                    o poder público e a sociedade civil na promoção da
+                    cidadania.
+                  </Box>
+
+                  <div className={"ctaButton"}>
+                    <Button
+                      onClick={() => cta.scrollIntoView({ behavior: "smooth" })}
+                      variant="contained"
+                      color="secondary"
+                    >
+                      Fale conosco
+                    </Button>
+                  </div>
+                </HeroTextMainText>
+              </LandingHeroTextInnerContainer>
+            </LandingHeroTextContainer>
+          </LandingHeroGridContainer>
+        </LandingBackgroundHero>
+      </Container>
+    </Box>
   )
 }
 

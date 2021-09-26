@@ -123,31 +123,6 @@ const useStyles = makeStyles(theme => ({
 function CourseContactForm(props) {
   const classes = useStyles()
 
-  const data = useStaticQuery(graphql`
-    {
-      allMarkdownRemark(
-        filter: { frontmatter: { contentType: { eq: "siteInfo" } } }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              contentType
-              phoneOne
-              phoneTwo
-              mailOne
-              mailTwo
-              instagramUrl
-              facebookUrl
-              whatsAppNum
-              whatsAppMessage
-              address
-            }
-          }
-        }
-      }
-    }
-  `)
-
   const [phoneOne, setPhoneOne] = React.useState(null)
   const [phoneTwo, setPhoneTwo] = React.useState(null)
   const [mailOne, setMailOne] = React.useState(null)
@@ -159,19 +134,6 @@ function CourseContactForm(props) {
     "Placeholder WhatsApp automatic message"
   )
   const [address, setAddress] = React.useState(null)
-
-  React.useEffect(() => {
-    let localArray = []
-
-    if (data.allMarkdownRemark.edges.length <= 0) {
-      console.log("No site info found")
-      return
-    } else {
-      localArray.allMarkdownRemark.edges.map((info, index) => {
-        return info.node.frontmatter
-      })
-    }
-  }, [])
 
   const [dialogState, setDialogState] = React.useState(false)
 
@@ -187,8 +149,8 @@ function CourseContactForm(props) {
     <div className={classes.primordialRoot}>
       <div className={classes.ancientRoot}>
         <ConfirmationDialog
+          callback={() => console.log("callback")}
           type={"success"}
-          title={"Mensagem enviada com sucesso"}
           message={
             "Obrigado pelo interesse! Sua mensagem foi enviada com sucesso, logo entraremos em contato com você através do número fornecido no formulário."
           }
@@ -382,7 +344,7 @@ function CourseContactForm(props) {
           <Box fontWeight={"700"} color={"#17396b"} py={1}>
             Telefones:
           </Box>
-          <Box py={1}>{"(51) 99346.9700"}</Box>
+          <Box py={1}>{"(51) 8910-5138"}</Box>
           {phoneTwo ? <Box py={1}>{phoneTwo}</Box> : null}
         </Box>
 

@@ -1,3 +1,4 @@
+import { Container } from "@material-ui/core"
 import { Timeline } from "@material-ui/lab"
 import React from "react"
 import styled from "styled-components"
@@ -86,7 +87,8 @@ let connectorArray = [
 
 const OurTeamV2 = () => {
   return (
-    <OurTeamV2Root>
+    <Container maxWidth='lg'>
+       <OurTeamV2Root>
       <OurTeamV2Container>
         <OurTeamV2SectionTitle>Atendimento e inclusão</OurTeamV2SectionTitle>
 
@@ -97,6 +99,7 @@ const OurTeamV2 = () => {
         </Timeline>
       </OurTeamV2Container>
     </OurTeamV2Root>
+    </Container>
   )
 }
 
