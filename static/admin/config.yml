@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+  repo: atlascodedev/coletivo-firebase-gatsby-netflycms
   commit_messages:
     create: "Create {{collection}} “{{slug}}” "
     update: "Update {{collection}} “{{slug}} ”"
